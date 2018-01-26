@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+
+    <ion-item>
+	  <ion-label stacked>Title</ion-label>
+	  <ion-input type="text" [(ngModel)]="task.title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+	  <ion-label stacked>Description</ion-label>
+	  <ion-input type="text" [(ngModel)]="task.description"></ion-input>
+    </ion-item>
+	
+	<ion-item>
+	  <ion-label stacked>Is completed?</ion-label>
+	  <ion-toggle [(ngModel)]="task.isCompleted" color="green"></ion-toggle>
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

@@ -6,12 +6,12 @@ namespace MUG_App.Test.Unit.Organizer
     [TestFixture]
     public class OrganizerFixture
     {
-        private MUG_App.Organizer.Organizer _testee;
+        private Shared.Organizer.Organizer _testee;
 
         [SetUp]
         public void SetUp()
         {
-            _testee = new MUG_App.Organizer.Organizer();
+            _testee = new Shared.Organizer.Organizer();
         }
 
         [Test]

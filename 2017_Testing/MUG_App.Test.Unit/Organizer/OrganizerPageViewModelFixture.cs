@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using FakeItEasy;
 using FluentAssertions;
-using MUG_App.Organizer;
+using MUG_App.Shared.Organizer;
 using NUnit.Framework;
 
 namespace MUG_App.Test.Unit.Organizer
@@ -110,9 +110,9 @@ namespace MUG_App.Test.Unit.Organizer
 
         #region Private Methods
 
-        private static MUG_App.Organizer.Organizer CreateDummyOrganizer(string name)
+        private static Shared.Organizer.Organizer CreateDummyOrganizer(string name)
         {
-            return new MUG_App.Organizer.Organizer { Name = name };
+            return new Shared.Organizer.Organizer { Name = name };
         }
 
         #endregion

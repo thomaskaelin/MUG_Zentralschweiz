@@ -1,12 +1,8 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using Xamarin.UITest;
-using Xamarin.UITest.Queries;
+﻿using Xamarin.UITest;
 
 namespace MUG_App.Test
 {
-    public class AppInitializer
+    public static class AppInitializer
     {
         public static IApp StartApp(Platform platform)
         {
@@ -14,7 +10,7 @@ namespace MUG_App.Test
             {
                 return ConfigureApp
                     .Android
-                    .InstalledApp("MUG_App.Android")
+                    .InstalledApp("ch.mug.zentralschweiz.app")
                     .StartApp();
             }
 

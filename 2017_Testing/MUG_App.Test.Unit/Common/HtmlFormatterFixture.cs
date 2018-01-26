@@ -1,5 +1,5 @@
 ﻿using FluentAssertions;
-using MUG_App.Common;
+using MUG_App.Shared.Common;
 using NUnit.Framework;
 
 namespace MUG_App.Test.Unit.Common

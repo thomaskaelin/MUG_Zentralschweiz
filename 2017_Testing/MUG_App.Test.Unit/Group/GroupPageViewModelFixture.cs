@@ -1,6 +1,6 @@
 ﻿using FakeItEasy;
 using FluentAssertions;
-using MUG_App.Group;
+using MUG_App.Shared.Group;
 using NUnit.Framework;
 
 namespace MUG_App.Test.Unit.Group
@@ -119,9 +119,9 @@ namespace MUG_App.Test.Unit.Group
 
         #region Private Methods
 
-        private static MUG_App.Group.Group CreateDummyGroup(string name, string description, string imageUrl)
+        private static Shared.Group.Group CreateDummyGroup(string name, string description, string imageUrl)
         {
-            return new MUG_App.Group.Group
+            return new Shared.Group.Group
             {
                 Name = name,
                 Description = description,

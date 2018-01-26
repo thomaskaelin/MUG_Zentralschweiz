@@ -6,12 +6,12 @@ namespace MUG_App.Test.Unit.Event
     [TestFixture]
     public class EventFixture
     {
-        private MUG_App.Event.Event _testee;
+        private Shared.Event.Event _testee;
 
         [SetUp]
         public void SetUp()
         {
-            _testee = new MUG_App.Event.Event();
+            _testee = new Shared.Event.Event();
         }
 
         [Test]

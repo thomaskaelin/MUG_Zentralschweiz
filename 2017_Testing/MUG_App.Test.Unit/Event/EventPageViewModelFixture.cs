@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using FakeItEasy;
 using FluentAssertions;
-using MUG_App.Event;
+using MUG_App.Shared.Event;
 using NUnit.Framework;
 
 namespace MUG_App.Test.Unit.Event
@@ -21,8 +21,10 @@ namespace MUG_App.Test.Unit.Event
         [Test]
         public void Events_IsInitialized_ByConstructor()
         {
-            // Assert
+            // Act
             var result = Testee.Events;
+
+            // Assert
             result.Should().NotBeNull();
             result.Should().BeEmpty();
         }
@@ -110,9 +112,9 @@ namespace MUG_App.Test.Unit.Event
 
         #region Private Methods
 
-        private static MUG_App.Event.Event CreateDummyEvent(string title)
+        private static Shared.Event.Event CreateDummyEvent(string title)
         {
-            return new MUG_App.Event.Event { Title = title };
+            return new Shared.Event.Event { Title = title };
         }
 
         #endregion

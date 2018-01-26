@@ -6,12 +6,12 @@ namespace MUG_App.Test.Unit.Group
     [TestFixture]
     public class GroupFixture
     {
-        private MUG_App.Group.Group _testee;
+        private Shared.Group.Group _testee;
 
         [SetUp]
         public void SetUp()
         {
-            _testee = new MUG_App.Group.Group();
+            _testee = new Shared.Group.Group();
         }
 
         [Test]

@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.ComponentModel;
-using MUG_App.Common;
+using MUG_App.Shared.Common;
 using NUnit.Framework;
 
 namespace MUG_App.Test.Unit

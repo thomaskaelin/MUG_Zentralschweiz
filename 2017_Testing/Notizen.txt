@@ -1,0 +1,10 @@
+Bugs:
+- iOS: Button zum Öffnen des Menus mit zu grossem Label ("Mobile User Group Zentralschweiz")
+- iOS: Bei der Events-Ansicht fehlt die zweite Zeile (Teilnehmer)
+
+Verbesserungspotential:
+- Parsing der JSON-Response mit Newtonsoft JSON statt dynamic
+- Laden des JSON vom Parsing trennen (zwei statt ein Service)
+- REST-Akzeptanztest ist eigentlich ein Integrationstests
+- REST-Akzeptanztest failed bei Änderungen der Daten >> Adaptieren
+- Hinweise anzeigen, wenn noch keine Daten geladen wurden ("keine Events", "keine Organizer", etc.)

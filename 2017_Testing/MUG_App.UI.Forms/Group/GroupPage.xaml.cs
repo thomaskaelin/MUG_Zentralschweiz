@@ -1,5 +1,4 @@
 ﻿using MUG_App.Shared.Group;
-using MUG_App.Shared.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -14,7 +13,7 @@ namespace MUG_App.UI.Forms.Group
         public GroupPage()
         {
             InitializeComponent();
-            _viewModel = new GroupPageViewModel(new RESTLoaderService());
+            _viewModel = DependencyInjection.Container.GetInstance<GroupPageViewModel>();
             BindingContext = _viewModel;
         }
 

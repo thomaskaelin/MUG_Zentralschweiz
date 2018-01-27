@@ -12,7 +12,7 @@ namespace MUG_App.UI.Forms.Main
         public MainPageMaster()
         {
             InitializeComponent();
-            BindingContext = new MainPageMasterViewModel();
+            BindingContext = DependencyInjection.Container.GetInstance<MainPageMasterViewModel>();
         }
     }
 }

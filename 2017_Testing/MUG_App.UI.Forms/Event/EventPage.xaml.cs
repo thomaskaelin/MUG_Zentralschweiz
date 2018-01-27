@@ -1,5 +1,4 @@
 ﻿using MUG_App.Shared.Event;
-using MUG_App.Shared.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,7 +12,7 @@ namespace MUG_App.UI.Forms.Event
         public EventPage()
         {
             InitializeComponent();
-            _viewModel = new EventPageViewModel(new RESTLoaderService());
+            _viewModel = DependencyInjection.Container.GetInstance<EventPageViewModel>();
             BindingContext = _viewModel;
         }
 

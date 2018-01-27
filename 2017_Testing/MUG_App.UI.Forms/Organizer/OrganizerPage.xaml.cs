@@ -1,5 +1,4 @@
 ﻿using MUG_App.Shared.Organizer;
-using MUG_App.Shared.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,7 +12,7 @@ namespace MUG_App.UI.Forms.Organizer
         public OrganizerPage()
         {
             InitializeComponent();
-            _viewModel = new OrganizerPageViewModel(new RESTLoaderService());
+            _viewModel = DependencyInjection.Container.GetInstance<OrganizerPageViewModel>();
             BindingContext = _viewModel;
         }
 

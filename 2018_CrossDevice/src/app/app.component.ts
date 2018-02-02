@@ -10,14 +10,14 @@ import { Task } from './task';
 })
 export class AppComponent {
 
-
+  newTask: Task = new Task;
   constructor(private taskDataService: TaskDataService) {
 
   }
 
-  addTodo() {
-    const newTask = new Task();
-    this.taskDataService.addTask(newTask);
+  addTask() {
+    this.taskDataService.addTask(this.newTask);
+    this.newTask = new Task;
   }
 
   get tasks() {

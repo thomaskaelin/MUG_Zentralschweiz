@@ -1,0 +1,9 @@
+<ion-card *ngFor="let member of members" style="margin-bottom: 20px !important;">
+  <ion-item>
+    <ion-avatar item-end>
+      <img [src]="member.imageUrl">
+    </ion-avatar>
+    <h2>{{member.name}}</h2>
+    <p>{{member.city}}</p>
+  </ion-item>
+</ion-card>

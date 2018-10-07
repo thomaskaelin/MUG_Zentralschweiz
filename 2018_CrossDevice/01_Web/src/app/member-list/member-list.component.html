@@ -1,0 +1,9 @@
+<div class="ui cards">
+  <div class="ui raised centered card" *ngFor="let member of members">
+    <div class="content">
+      <img class="right floated ui avatar image" style="width: 60px; height: 60px;" [src]="member.imageUrl">
+      <a class="header" [href]="member.profileUrl">{{member.name}}</a>
+      <div class="meta">{{member.city}}</div>
+    </div>
+  </div>
+</div>

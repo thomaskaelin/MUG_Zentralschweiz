@@ -1,9 +1,352 @@
 {
   "results": [
     {
-      "birthday": {
-        "year": 1984
+      "country": "ch",
+      "city": "Luzern",
+      "topics": [
+        {
+          "urlkey": "softwaredev",
+          "name": "Software Development",
+          "id": 3833
+        }
+      ],
+      "joined": 1484137808000,
+      "link": "http://www.meetup.com/members/197895532",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/a/b/6/5/highres_252763877.jpeg",
+        "photo_id": 252763877,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/a/b/6/5/member_252763877.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/a/b/6/5/thumb_252763877.jpeg"
       },
+      "lon": 8.3,
+      "other_services": {
+
+      },
+      "name": "Markus Tanner",
+      "visited": 1539193180000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 197895532,
+      "lat": 47.06,
+      "status": "active"
+    },
+    {
+      "country": "ch",
+      "city": "Luzern",
+      "topics": [
+
+      ],
+      "joined": 1536748583000,
+      "link": "http://www.meetup.com/members/225898111",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/b/7/4/f/highres_266986927.jpeg",
+        "photo_id": 266986927,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/b/7/4/f/member_266986927.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/b/7/4/f/thumb_266986927.jpeg"
+      },
+      "lon": 8.3,
+      "other_services": {
+
+      },
+      "name": "Pirmin",
+      "visited": 1538499820000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 225898111,
+      "lat": 47.06,
+      "status": "active"
+    },
+    {
+      "country": "ch",
+      "city": "Luzern",
+      "topics": [
+        {
+          "urlkey": "latinmusic",
+          "name": "Latin Music",
+          "id": 130
+        },
+        {
+          "urlkey": "lean-startup",
+          "name": "Lean Startup",
+          "id": 38660
+        },
+        {
+          "urlkey": "creative",
+          "name": "Creativity",
+          "id": 36229
+        },
+        {
+          "urlkey": "fun-times",
+          "name": "Fun Times",
+          "id": 15117
+        },
+        {
+          "urlkey": "adventure",
+          "name": "Adventure",
+          "id": 15892
+        },
+        {
+          "urlkey": "animals",
+          "name": "Animals",
+          "id": 37663
+        },
+        {
+          "urlkey": "innovation",
+          "name": "Innovation",
+          "id": 1954
+        },
+        {
+          "urlkey": "dog-play-groups",
+          "name": "Dog Playgroups",
+          "id": 18340
+        },
+        {
+          "urlkey": "culture-exchange",
+          "name": "Culture Exchange",
+          "id": 67622
+        },
+        {
+          "urlkey": "paper-crafts",
+          "name": "Paper Crafts",
+          "id": 17320
+        },
+        {
+          "urlkey": "businessintell",
+          "name": "Business Intelligence",
+          "id": 10538
+        },
+        {
+          "urlkey": "music",
+          "name": "Music",
+          "id": 15018
+        },
+        {
+          "urlkey": "activedogs",
+          "name": "Active Dogs",
+          "id": 9772
+        },
+        {
+          "urlkey": "musicians",
+          "name": "Musicians",
+          "id": 173
+        },
+        {
+          "urlkey": "startup-businesses",
+          "name": "Startup Businesses",
+          "id": 21681
+        },
+        {
+          "urlkey": "dog-walks",
+          "name": "Dog Walks",
+          "id": 18874
+        },
+        {
+          "urlkey": "beauty",
+          "name": "Beauty",
+          "id": 63675
+        },
+        {
+          "urlkey": "pets-animals",
+          "name": "Pets",
+          "id": 53052
+        },
+        {
+          "urlkey": "boston-artists",
+          "name": "Artists",
+          "id": 16573
+        },
+        {
+          "urlkey": "fashion-and-style",
+          "name": "Fashion and Style",
+          "id": 16575
+        },
+        {
+          "urlkey": "beer",
+          "name": "Beer",
+          "id": 1475
+        },
+        {
+          "urlkey": "bike",
+          "name": "Bicycling",
+          "id": 579
+        },
+        {
+          "urlkey": "photography-classes",
+          "name": "Photography Classes",
+          "id": 15043
+        },
+        {
+          "urlkey": "outdoors",
+          "name": "Outdoors",
+          "id": 15046
+        },
+        {
+          "urlkey": "diy",
+          "name": "DIY (Do It Yourself)",
+          "id": 10438
+        },
+        {
+          "urlkey": "outdoor-adventures",
+          "name": "Outdoor Adventures",
+          "id": 16967
+        },
+        {
+          "urlkey": "make-new-friends-from-all-walks-of-life",
+          "name": "Make New Friends, from all Walks of Life",
+          "id": 17225
+        },
+        {
+          "urlkey": "diningout",
+          "name": "Dining Out",
+          "id": 713
+        },
+        {
+          "urlkey": "handmade-crafts",
+          "name": "Handmade Crafts",
+          "id": 16459
+        },
+        {
+          "urlkey": "collaboration",
+          "name": "Collaboration",
+          "id": 21067
+        },
+        {
+          "urlkey": "social-media-for-business",
+          "name": "Social Media for Business",
+          "id": 37708
+        },
+        {
+          "urlkey": "livemusic",
+          "name": "Live Music",
+          "id": 8652
+        },
+        {
+          "urlkey": "digcam",
+          "name": "Digital Photography",
+          "id": 206
+        },
+        {
+          "urlkey": "travel",
+          "name": "Travel",
+          "id": 1998
+        },
+        {
+          "urlkey": "language",
+          "name": "Language & Culture",
+          "id": 10454
+        },
+        {
+          "urlkey": "collaboration-between-creative-minds",
+          "name": "Collaboration between Creative Minds",
+          "id": 29526
+        },
+        {
+          "urlkey": "dogs",
+          "name": "Dogs",
+          "id": 15067
+        },
+        {
+          "urlkey": "art",
+          "name": "Art",
+          "id": 1502
+        },
+        {
+          "urlkey": "photo",
+          "name": "Photography",
+          "id": 223
+        },
+        {
+          "urlkey": "having-fun",
+          "name": "Having Fun",
+          "id": 20705
+        },
+        {
+          "urlkey": "online-marketing",
+          "name": "Online Marketing",
+          "id": 15585
+        },
+        {
+          "urlkey": "business-strategy",
+          "name": "Business Strategy",
+          "id": 17635
+        },
+        {
+          "urlkey": "wine",
+          "name": "Wine",
+          "id": 611
+        },
+        {
+          "urlkey": "language-exchange",
+          "name": "Language Exchange",
+          "id": 26212
+        },
+        {
+          "urlkey": "makers",
+          "name": "Makers",
+          "id": 43887
+        },
+        {
+          "urlkey": "craftswap",
+          "name": "Crafts",
+          "id": 10099
+        },
+        {
+          "urlkey": "makeovers",
+          "name": "Makeovers",
+          "id": 4475
+        },
+        {
+          "urlkey": "pubs-bars",
+          "name": "Pubs and Bars",
+          "id": 19195
+        },
+        {
+          "urlkey": "group-singing",
+          "name": "Group Singing",
+          "id": 54268
+        },
+        {
+          "urlkey": "food-and-drink",
+          "name": "Food and Drink",
+          "id": 87548
+        }
+      ],
+      "joined": 1523955836000,
+      "link": "http://www.meetup.com/members/252574480",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/a/8/b/e/highres_276463198.jpeg",
+        "photo_id": 276463198,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/a/8/b/e/member_276463198.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/a/8/b/e/thumb_276463198.jpeg"
+      },
+      "lon": 8.3,
+      "other_services": {
+
+      },
+      "name": "Filipe Sa",
+      "visited": 1523955836000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 252574480,
+      "lat": 47.06,
+      "status": "active"
+    },
+    {
       "country": "ch",
       "city": "Luzern",
       "topics": [
@@ -130,7 +473,7 @@
       ],
       "joined": 1478869063000,
       "link": "http://www.meetup.com/members/184741056",
-      "bio": "Ich entwickele seit fast 20 Jahren Softwaresysteme in den Bereichen Desktop, Web und Mobile. Besonderen Wert lege ich auf moderne SE-Praktiken. Innerhalb der bbv Software Services beschäftige ich mich intensiv mit allen grossen Mobil-Plattformen.",
+      "bio": "Ich entwickele seit fast 20 Jahren Softwaresysteme in den Bereichen Desktop, Web und Mobile. Besonderen Wert lege ich auf moderne SE-Praktiken. Innerhalb der bbv Software Services besch\u00e4ftige ich mich intensiv mit allen grossen Mobil-Plattformen.",
       "photo": {
         "highres_link": "https://secure.meetupstatic.com/photos/member/9/2/f/d/highres_261697629.jpeg",
         "photo_id": 261697629,
@@ -139,26 +482,410 @@
         "photo_link": "https://secure.meetupstatic.com/photos/member/9/2/f/d/member_261697629.jpeg",
         "thumb_link": "https://secure.meetupstatic.com/photos/member/9/2/f/d/thumb_261697629.jpeg"
       },
-      "lon": 8.300000190734863,
+      "lon": 8.3,
       "other_services": {
         "twitter": {
           "identifier": "@TomK_SE"
         }
       },
-      "name": "Thomas Kälin",
-      "visited": 1538489622000,
+      "name": "Thomas K\u00e4lin",
+      "visited": 1539510065000,
       "self": {
-        "common": {}
+        "common": {
+
+        }
       },
       "id": 184741056,
-      "lang": "de_DE",
-      "lat": 47.060001373291016,
+      "lat": 47.06,
+      "status": "active"
+    },
+    {
+      "country": "ch",
+      "city": "Zürich",
+      "topics": [
+        {
+          "urlkey": "softwaredev",
+          "name": "Software Development",
+          "id": 3833
+        }
+      ],
+      "joined": 1486051876000,
+      "link": "http://www.meetup.com/members/214507361",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/3/3/7/4/highres_273613172.jpeg",
+        "photo_id": 273613172,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/3/3/7/4/member_273613172.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/3/3/7/4/thumb_273613172.jpeg"
+      },
+      "lon": 8.54,
+      "other_services": {
+
+      },
+      "name": "Orlando Wenzinger",
+      "visited": 1495542448000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 214507361,
+      "lat": 47.38,
+      "status": "active"
+    },
+    {
+      "country": "ch",
+      "city": "Zürich",
+      "topics": [
+        {
+          "urlkey": "drums",
+          "name": "Drums",
+          "id": 175
+        },
+        {
+          "urlkey": "spanish",
+          "name": "Spanish Language",
+          "id": 183
+        },
+        {
+          "urlkey": "drumcircle",
+          "name": "Drum Circle",
+          "id": 2278
+        },
+        {
+          "urlkey": "livemusic",
+          "name": "Live Music",
+          "id": 8652
+        },
+        {
+          "urlkey": "sports",
+          "name": "Sports and Recreation",
+          "id": 10451
+        },
+        {
+          "urlkey": "cycling",
+          "name": "Cycling",
+          "id": 18617
+        },
+        {
+          "urlkey": "bike",
+          "name": "Bicycling",
+          "id": 579
+        },
+        {
+          "urlkey": "road-cycling",
+          "name": "Road Cycling",
+          "id": 17259
+        },
+        {
+          "urlkey": "mountain-biking",
+          "name": "Mountain Biking",
+          "id": 20266
+        },
+        {
+          "urlkey": "jazz",
+          "name": "Jazz",
+          "id": 131
+        },
+        {
+          "urlkey": "opensource",
+          "name": "Open Source",
+          "id": 563
+        },
+        {
+          "urlkey": "kayaking",
+          "name": "Kayaking",
+          "id": 590
+        },
+        {
+          "urlkey": "edtech",
+          "name": "Education & Technology",
+          "id": 7203
+        },
+        {
+          "urlkey": "newtech",
+          "name": "New Technology",
+          "id": 9696
+        },
+        {
+          "urlkey": "mobile-technology",
+          "name": "Mobile Technology",
+          "id": 16216
+        },
+        {
+          "urlkey": "computer-programming",
+          "name": "Computer programming",
+          "id": 48471
+        },
+        {
+          "urlkey": "it-professionals",
+          "name": "IT Professionals",
+          "id": 164111
+        },
+        {
+          "urlkey": "sap",
+          "name": "SAP Professional",
+          "id": 460
+        },
+        {
+          "urlkey": "hiking",
+          "name": "Hiking",
+          "id": 638
+        },
+        {
+          "urlkey": "paddling",
+          "name": "Paddling",
+          "id": 726
+        },
+        {
+          "urlkey": "surfing",
+          "name": "Surfing",
+          "id": 1428
+        },
+        {
+          "urlkey": "ibd",
+          "name": "Investor's Business Daily",
+          "id": 2545
+        },
+        {
+          "urlkey": "itexec",
+          "name": "IT Execs",
+          "id": 4411
+        },
+        {
+          "urlkey": "kiteboarding",
+          "name": "Kiteboarding",
+          "id": 6481
+        },
+        {
+          "urlkey": "web",
+          "name": "Web Technology",
+          "id": 10209
+        },
+        {
+          "urlkey": "kitesurfing",
+          "name": "Kitesurfing",
+          "id": 26637
+        },
+        {
+          "urlkey": "python",
+          "name": "Python",
+          "id": 1064
+        },
+        {
+          "urlkey": "softwaredev",
+          "name": "Software Development",
+          "id": 3833
+        },
+        {
+          "urlkey": "django",
+          "name": "Django",
+          "id": 10553
+        },
+        {
+          "urlkey": "technology",
+          "name": "Technology",
+          "id": 10579
+        },
+        {
+          "urlkey": "nosql",
+          "name": "NoSQL",
+          "id": 58162
+        },
+        {
+          "urlkey": "distributed-computing",
+          "name": "distributed computing",
+          "id": 586642
+        },
+        {
+          "urlkey": "businessintell",
+          "name": "Business Intelligence",
+          "id": 10538
+        },
+        {
+          "urlkey": "cloud-computing",
+          "name": "Cloud Computing",
+          "id": 15167
+        },
+        {
+          "urlkey": "hadoop",
+          "name": "Hadoop",
+          "id": 18060
+        },
+        {
+          "urlkey": "big-data",
+          "name": "Big Data",
+          "id": 18062
+        },
+        {
+          "urlkey": "natural-language-processing",
+          "name": "Natural Language Processing",
+          "id": 24553
+        },
+        {
+          "urlkey": "machine-learning",
+          "name": "Machine Learning",
+          "id": 29971
+        },
+        {
+          "urlkey": "data-analytics",
+          "name": "Data Analytics",
+          "id": 30928
+        },
+        {
+          "urlkey": "predictive-analytics",
+          "name": "Predictive Analytics",
+          "id": 38458
+        },
+        {
+          "urlkey": "hive",
+          "name": "Hive",
+          "id": 61679
+        },
+        {
+          "urlkey": "real-time-analytics",
+          "name": "Real Time Analytics",
+          "id": 87938
+        },
+        {
+          "urlkey": "data-science",
+          "name": "Data Science",
+          "id": 102811
+        },
+        {
+          "urlkey": "big-data-analytics",
+          "name": "Big Data Analytics",
+          "id": 383411
+        },
+        {
+          "urlkey": "digcam",
+          "name": "Digital Photography",
+          "id": 206
+        },
+        {
+          "urlkey": "photo",
+          "name": "Photography",
+          "id": 223
+        },
+        {
+          "urlkey": "fitness",
+          "name": "Fitness",
+          "id": 242
+        },
+        {
+          "urlkey": "art",
+          "name": "Art",
+          "id": 1502
+        },
+        {
+          "urlkey": "travel",
+          "name": "Travel",
+          "id": 1998
+        },
+        {
+          "urlkey": "language",
+          "name": "Language & Culture",
+          "id": 10454
+        }
+      ],
+      "joined": 1503420077000,
+      "link": "http://www.meetup.com/members/41183632",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/4/4/0/e/highres_51617422.jpeg",
+        "photo_id": 51617422,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/4/4/0/e/member_51617422.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/4/4/0/e/thumb_51617422.jpeg"
+      },
+      "lon": 8.54,
+      "other_services": {
+
+      },
+      "name": "Adam",
+      "visited": 1539524394000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 41183632,
+      "lat": 47.38,
+      "status": "active"
+    },
+    {
+      "country": "ch",
+      "city": "Schwyz",
+      "topics": [
+
+      ],
+      "joined": 1510091086000,
+      "link": "http://www.meetup.com/members/240712283",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/1/d/8/9/highres_280927561.jpeg",
+        "photo_id": 280927561,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/1/d/8/9/member_280927561.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/1/d/8/9/thumb_280927561.jpeg"
+      },
+      "lon": 8.66,
+      "other_services": {
+
+      },
+      "name": "Nikzad",
+      "visited": 1535638451000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 240712283,
+      "lat": 47.02,
+      "status": "active"
+    },
+    {
+      "country": "ch",
+      "city": "Luzern",
+      "topics": [
+        {
+          "urlkey": "basketball",
+          "name": "Basketball",
+          "id": 3597
+        }
+      ],
+      "joined": 1489609476000,
+      "link": "http://www.meetup.com/members/181339692",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/5/e/c/e/highres_265164270.jpeg",
+        "photo_id": 265164270,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/5/e/c/e/member_265164270.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/5/e/c/e/thumb_265164270.jpeg"
+      },
+      "lon": 8.3,
+      "other_services": {
+
+      },
+      "name": "Andi",
+      "visited": 1525350210000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 181339692,
+      "lat": 47.06,
       "status": "active"
     },
     {
       "country": "ch",
       "city": "Kriens",
-      "topics": [],
+      "topics": [
+
+      ],
       "joined": 1493715079000,
       "link": "http://www.meetup.com/members/183341276",
       "photo": {
@@ -170,11 +897,15 @@
         "thumb_link": "https://secure.meetupstatic.com/photos/member/3/2/b/f/thumb_242652991.jpeg"
       },
       "lon": 8.27,
-      "other_services": {},
+      "other_services": {
+
+      },
       "name": "Michel E.",
       "visited": 1515275856000,
       "self": {
-        "common": {}
+        "common": {
+
+        }
       },
       "id": 183341276,
       "lat": 47.03,
@@ -182,159 +913,212 @@
     },
     {
       "country": "ch",
-      "city": "Luzern",
+      "city": "Kriens",
       "topics": [
+        {
+          "urlkey": "board-games",
+          "name": "Board Games",
+          "id": 19585
+        },
+        {
+          "urlkey": "latinmusic",
+          "name": "Latin Music",
+          "id": 130
+        },
+        {
+          "urlkey": "beer",
+          "name": "Beer",
+          "id": 1475
+        },
+        {
+          "urlkey": "bike",
+          "name": "Bicycling",
+          "id": 579
+        },
+        {
+          "urlkey": "movie-nights",
+          "name": "Movie Nights",
+          "id": 15940
+        },
+        {
+          "urlkey": "japanese-cinema",
+          "name": "Japanese Films",
+          "id": 14980
+        },
         {
           "urlkey": "outdoors",
           "name": "Outdoors",
           "id": 15046
         },
         {
-          "urlkey": "databasepro",
-          "name": "Database Professionals",
-          "id": 1245
+          "urlkey": "diy",
+          "name": "DIY (Do It Yourself)",
+          "id": 10438
         },
         {
-          "urlkey": "oracle",
-          "name": "Oracle",
-          "id": 2544
+          "urlkey": "make-new-friends-from-all-walks-of-life",
+          "name": "Make New Friends, from all Walks of Life",
+          "id": 17225
         },
         {
-          "urlkey": "database-development",
-          "name": "Database Development",
-          "id": 21506
+          "urlkey": "diningout",
+          "name": "Dining Out",
+          "id": 713
         },
         {
-          "urlkey": "data-analytics",
-          "name": "Data Analytics",
-          "id": 30928
+          "urlkey": "social-media-for-business",
+          "name": "Social Media for Business",
+          "id": 37708
         },
         {
-          "urlkey": "java",
-          "name": "Java",
-          "id": 189
+          "urlkey": "fun-times",
+          "name": "Fun Times",
+          "id": 15117
         },
         {
-          "urlkey": "travel",
-          "name": "Travel",
-          "id": 1998
+          "urlkey": "big-data",
+          "name": "Big Data",
+          "id": 18062
         },
         {
-          "urlkey": "mind",
-          "name": "Mind",
-          "id": 21548
+          "urlkey": "eventplanning",
+          "name": "Event Planning",
+          "id": 1044
         },
         {
-          "urlkey": "psychology",
-          "name": "Psychology",
-          "id": 3485
+          "urlkey": "singers",
+          "name": "Singing",
+          "id": 17301
         },
         {
-          "urlkey": "behavioral-psychology",
-          "name": "Behavioral Psychology",
-          "id": 97313
+          "urlkey": "gaming",
+          "name": "Gaming",
+          "id": 18071
         },
         {
-          "urlkey": "jungian-psychology",
-          "name": "Jungian psychology",
-          "id": 20074
+          "urlkey": "founders",
+          "name": "Founders",
+          "id": 46616
         },
         {
-          "urlkey": "agile-project-management",
-          "name": "Agile Project Management",
-          "id": 21549
+          "urlkey": "web",
+          "name": "Web Technology",
+          "id": 10209
         },
         {
-          "urlkey": "lean-project-management",
-          "name": "Lean Project Management",
-          "id": 118991
+          "urlkey": "innovation",
+          "name": "Innovation",
+          "id": 1954
+        },
+        {
+          "urlkey": "business-strategy",
+          "name": "Business Strategy",
+          "id": 17635
+        },
+        {
+          "urlkey": "wine",
+          "name": "Wine",
+          "id": 611
+        },
+        {
+          "urlkey": "businessintell",
+          "name": "Business Intelligence",
+          "id": 10538
+        },
+        {
+          "urlkey": "music",
+          "name": "Music",
+          "id": 15018
+        },
+        {
+          "urlkey": "neighborhood",
+          "name": "Neighborhood",
+          "id": 29035
+        },
+        {
+          "urlkey": "musicians",
+          "name": "Musicians",
+          "id": 173
+        },
+        {
+          "urlkey": "movies",
+          "name": "Watching Movies",
+          "id": 1201
+        },
+        {
+          "urlkey": "startup-businesses",
+          "name": "Startup Businesses",
+          "id": 21681
+        },
+        {
+          "urlkey": "craftswap",
+          "name": "Crafts",
+          "id": 10099
+        },
+        {
+          "urlkey": "film",
+          "name": "Film",
+          "id": 15029
+        },
+        {
+          "urlkey": "women",
+          "name": "Women's Social",
+          "id": 10232
+        },
+        {
+          "urlkey": "games",
+          "name": "Games",
+          "id": 15992
+        },
+        {
+          "urlkey": "softwaredev",
+          "name": "Software Development",
+          "id": 3833
+        },
+        {
+          "urlkey": "eating-drinking-talking-laughing-etc",
+          "name": "Eating, Drinking, Talking, Laughing, Etc",
+          "id": 19130
+        },
+        {
+          "urlkey": "food-and-drink",
+          "name": "Food and Drink",
+          "id": 87548
+        },
+        {
+          "urlkey": "hiking",
+          "name": "Hiking",
+          "id": 638
+        },
+        {
+          "urlkey": "game-night",
+          "name": "Game Night",
+          "id": 40126
         }
       ],
-      "joined": 1537163164000,
-      "link": "http://www.meetup.com/members/188070960",
+      "joined": 1533381331000,
+      "link": "http://www.meetup.com/members/260338279",
       "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/a/e/9/6/highres_279404694.jpeg",
-        "photo_id": 279404694,
+        "highres_link": "https://secure.meetupstatic.com/photos/member/8/8/0/5/highres_279454821.jpeg",
+        "photo_id": 279454821,
         "base_url": "https://secure.meetupstatic.com",
         "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/a/e/9/6/member_279404694.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/a/e/9/6/thumb_279404694.jpeg"
+        "photo_link": "https://secure.meetupstatic.com/photos/member/8/8/0/5/member_279454821.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/8/8/0/5/thumb_279454821.jpeg"
       },
-      "lon": 8.3,
-      "other_services": {},
-      "name": "Aleks",
-      "visited": 1537163164000,
+      "lon": 8.27,
+      "other_services": {
+
+      },
+      "name": "monica lynn",
+      "visited": 1533381331000,
       "self": {
-        "common": {}
-      },
-      "id": 188070960,
-      "lat": 47.06,
-      "status": "active"
-    },
-    {
-      "country": "ch",
-      "city": "Zürich",
-      "topics": [
-        {
-          "urlkey": "opensource",
-          "name": "Open Source",
-          "id": 563
-        },
-        {
-          "urlkey": "newtech",
-          "name": "New Technology",
-          "id": 9696
-        },
-        {
-          "urlkey": "user-experience",
-          "name": "User Experience",
-          "id": 19243
-        },
-        {
-          "urlkey": "agile-project-management",
-          "name": "Agile Project Management",
-          "id": 21549
-        },
-        {
-          "urlkey": "functional-programming",
-          "name": "Functional Programming",
-          "id": 22792
-        },
-        {
-          "urlkey": "machine-learning",
-          "name": "Machine Learning",
-          "id": 29971
-        },
-        {
-          "urlkey": "computer-programming",
-          "name": "Computer programming",
-          "id": 48471
-        },
-        {
-          "urlkey": "technology-startups",
-          "name": "Technology Startups",
-          "id": 108403
+        "common": {
+
         }
-      ],
-      "joined": 1523956670000,
-      "link": "http://www.meetup.com/members/188124004",
-      "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/9/6/8/d/highres_246698541.jpeg",
-        "photo_id": 246698541,
-        "base_url": "https://secure.meetupstatic.com",
-        "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/9/6/8/d/member_246698541.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/9/6/8/d/thumb_246698541.jpeg"
       },
-      "lon": 8.54,
-      "other_services": {},
-      "name": "Britta",
-      "visited": 1538393392000,
-      "self": {
-        "common": {}
-      },
-      "id": 188124004,
-      "lat": 47.38,
+      "id": 260338279,
+      "lat": 47.03,
       "status": "active"
     },
     {
@@ -603,11 +1387,15 @@
         "thumb_link": "https://secure.meetupstatic.com/photos/member/2/e/6/1/thumb_265271873.jpeg"
       },
       "lon": 8.3,
-      "other_services": {},
+      "other_services": {
+
+      },
       "name": "Sacha",
-      "visited": 1530278408000,
+      "visited": 1539254763000,
       "self": {
-        "common": {}
+        "common": {
+
+        }
       },
       "id": 224061196,
       "lat": 47.06,
@@ -615,484 +1403,33 @@
     },
     {
       "country": "ch",
-      "city": "Kriens",
-      "topics": [
-        {
-          "urlkey": "board-games",
-          "name": "Board Games",
-          "id": 19585
-        },
-        {
-          "urlkey": "latinmusic",
-          "name": "Latin Music",
-          "id": 130
-        },
-        {
-          "urlkey": "beer",
-          "name": "Beer",
-          "id": 1475
-        },
-        {
-          "urlkey": "bike",
-          "name": "Bicycling",
-          "id": 579
-        },
-        {
-          "urlkey": "movie-nights",
-          "name": "Movie Nights",
-          "id": 15940
-        },
-        {
-          "urlkey": "japanese-cinema",
-          "name": "Japanese Films",
-          "id": 14980
-        },
-        {
-          "urlkey": "outdoors",
-          "name": "Outdoors",
-          "id": 15046
-        },
-        {
-          "urlkey": "diy",
-          "name": "DIY (Do It Yourself)",
-          "id": 10438
-        },
-        {
-          "urlkey": "make-new-friends-from-all-walks-of-life",
-          "name": "Make New Friends, from all Walks of Life",
-          "id": 17225
-        },
-        {
-          "urlkey": "diningout",
-          "name": "Dining Out",
-          "id": 713
-        },
-        {
-          "urlkey": "social-media-for-business",
-          "name": "Social Media for Business",
-          "id": 37708
-        },
-        {
-          "urlkey": "fun-times",
-          "name": "Fun Times",
-          "id": 15117
-        },
-        {
-          "urlkey": "big-data",
-          "name": "Big Data",
-          "id": 18062
-        },
-        {
-          "urlkey": "eventplanning",
-          "name": "Event Planning",
-          "id": 1044
-        },
-        {
-          "urlkey": "singers",
-          "name": "Singing",
-          "id": 17301
-        },
-        {
-          "urlkey": "gaming",
-          "name": "Gaming",
-          "id": 18071
-        },
-        {
-          "urlkey": "founders",
-          "name": "Founders",
-          "id": 46616
-        },
-        {
-          "urlkey": "web",
-          "name": "Web Technology",
-          "id": 10209
-        },
-        {
-          "urlkey": "innovation",
-          "name": "Innovation",
-          "id": 1954
-        },
-        {
-          "urlkey": "business-strategy",
-          "name": "Business Strategy",
-          "id": 17635
-        },
-        {
-          "urlkey": "wine",
-          "name": "Wine",
-          "id": 611
-        },
-        {
-          "urlkey": "businessintell",
-          "name": "Business Intelligence",
-          "id": 10538
-        },
-        {
-          "urlkey": "music",
-          "name": "Music",
-          "id": 15018
-        },
-        {
-          "urlkey": "neighborhood",
-          "name": "Neighborhood",
-          "id": 29035
-        },
-        {
-          "urlkey": "musicians",
-          "name": "Musicians",
-          "id": 173
-        },
-        {
-          "urlkey": "movies",
-          "name": "Watching Movies",
-          "id": 1201
-        },
-        {
-          "urlkey": "startup-businesses",
-          "name": "Startup Businesses",
-          "id": 21681
-        },
-        {
-          "urlkey": "craftswap",
-          "name": "Crafts",
-          "id": 10099
-        },
-        {
-          "urlkey": "film",
-          "name": "Film",
-          "id": 15029
-        },
-        {
-          "urlkey": "women",
-          "name": "Women's Social",
-          "id": 10232
-        },
-        {
-          "urlkey": "games",
-          "name": "Games",
-          "id": 15992
-        },
-        {
-          "urlkey": "softwaredev",
-          "name": "Software Development",
-          "id": 3833
-        },
-        {
-          "urlkey": "eating-drinking-talking-laughing-etc",
-          "name": "Eating, Drinking, Talking, Laughing, Etc",
-          "id": 19130
-        },
-        {
-          "urlkey": "food-and-drink",
-          "name": "Food and Drink",
-          "id": 87548
-        },
-        {
-          "urlkey": "hiking",
-          "name": "Hiking",
-          "id": 638
-        },
-        {
-          "urlkey": "game-night",
-          "name": "Game Night",
-          "id": 40126
-        }
-      ],
-      "joined": 1533381331000,
-      "link": "http://www.meetup.com/members/260338279",
-      "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/8/8/0/5/highres_279454821.jpeg",
-        "photo_id": 279454821,
-        "base_url": "https://secure.meetupstatic.com",
-        "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/8/8/0/5/member_279454821.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/8/8/0/5/thumb_279454821.jpeg"
-      },
-      "lon": 8.27,
-      "other_services": {},
-      "name": "monica lynn",
-      "visited": 1533381331000,
-      "self": {
-        "common": {}
-      },
-      "id": 260338279,
-      "lat": 47.03,
-      "status": "active"
-    },
-    {
-      "country": "ch",
+      "hometown": "Zurich",
       "city": "Zürich",
       "topics": [
-        {
-          "urlkey": "ai",
-          "name": "Artificial Intelligence",
-          "id": 456
-        },
-        {
-          "urlkey": "opensource",
-          "name": "Open Source",
-          "id": 563
-        },
-        {
-          "urlkey": "databasepro",
-          "name": "Database Professionals",
-          "id": 1245
-        },
-        {
-          "urlkey": "ia",
-          "name": "Information Architecture",
-          "id": 1369
-        },
-        {
-          "urlkey": "softwaredev",
-          "name": "Software Development",
-          "id": 3833
-        },
-        {
-          "urlkey": "newtech",
-          "name": "New Technology",
-          "id": 9696
-        },
-        {
-          "urlkey": "ixd",
-          "name": "Interaction Design",
-          "id": 10110
-        },
-        {
-          "urlkey": "datamanagement",
-          "name": "Data Management",
-          "id": 10494
-        },
-        {
-          "urlkey": "businessintell",
-          "name": "Business Intelligence",
-          "id": 10538
-        },
-        {
-          "urlkey": "leadership",
-          "name": "Leadership",
-          "id": 15121
-        },
-        {
-          "urlkey": "hadoop",
-          "name": "Hadoop",
-          "id": 18060
-        },
-        {
-          "urlkey": "big-data",
-          "name": "Big Data",
-          "id": 18062
-        },
-        {
-          "urlkey": "user-experience",
-          "name": "User Experience",
-          "id": 19243
-        },
-        {
-          "urlkey": "startup-businesses",
-          "name": "Startup Businesses",
-          "id": 21681
-        },
-        {
-          "urlkey": "business-intelligence-best-practices",
-          "name": "Business Intelligence Best Practices",
-          "id": 22622
-        },
-        {
-          "urlkey": "web-analytics",
-          "name": "Web Analytics",
-          "id": 24439
-        },
-        {
-          "urlkey": "usability",
-          "name": "Usability",
-          "id": 26938
-        },
-        {
-          "urlkey": "machine-learning",
-          "name": "Machine Learning",
-          "id": 29971
-        },
-        {
-          "urlkey": "text-analytics",
-          "name": "Text Analytics",
-          "id": 29972
-        },
-        {
-          "urlkey": "data-analytics",
-          "name": "Data Analytics",
-          "id": 30928
-        },
-        {
-          "urlkey": "data-visualization",
-          "name": "Data Visualization",
-          "id": 37381
-        },
-        {
-          "urlkey": "predictive-analytics",
-          "name": "Predictive Analytics",
-          "id": 38458
-        },
-        {
-          "urlkey": "lean-startup",
-          "name": "Lean Startup",
-          "id": 38660
-        },
-        {
-          "urlkey": "google-analytics",
-          "name": "Google Analytics",
-          "id": 47790
-        },
-        {
-          "urlkey": "user-research",
-          "name": "User Research",
-          "id": 49541
-        },
-        {
-          "urlkey": "data-mining",
-          "name": "Data Mining",
-          "id": 55324
-        },
-        {
-          "urlkey": "ux-design",
-          "name": "UX Design",
-          "id": 61781
-        },
-        {
-          "urlkey": "real-time-analytics",
-          "name": "Real Time Analytics",
-          "id": 87938
-        },
-        {
-          "urlkey": "ui-ux",
-          "name": "UI/UX",
-          "id": 96788
-        },
-        {
-          "urlkey": "business-analytics",
-          "name": "Business Analytics",
-          "id": 98842
-        },
-        {
-          "urlkey": "data-science",
-          "name": "Data Science",
-          "id": 102811
-        },
-        {
-          "urlkey": "ui-design",
-          "name": "UI Design",
-          "id": 107583
-        },
-        {
-          "urlkey": "technology-startups",
-          "name": "Technology Startups",
-          "id": 108403
-        },
-        {
-          "urlkey": "marketing-analytics",
-          "name": "Marketing Analytics",
-          "id": 110190
-        },
-        {
-          "urlkey": "mobile-user-experience",
-          "name": "Mobile User Experience",
-          "id": 122974
-        },
-        {
-          "urlkey": "healthcare-innovation",
-          "name": "Healthcare Innovation",
-          "id": 154951
-        },
-        {
-          "urlkey": "big-data-analytics",
-          "name": "Big Data Analytics",
-          "id": 383411
-        },
-        {
-          "urlkey": "lean-ux",
-          "name": "Lean UX",
-          "id": 437352
-        },
-        {
-          "urlkey": "ux-research",
-          "name": "UX Research",
-          "id": 480492
-        },
-        {
-          "urlkey": "to-promote-r-for-big-data-analytics",
-          "name": "To promote R for big data analytics",
-          "id": 672792
-        },
-        {
-          "urlkey": "agile-ux",
-          "name": "Agile UX",
-          "id": 691612
-        },
-        {
-          "urlkey": "ux-technology",
-          "name": "UX Technology",
-          "id": 691622
-        },
-        {
-          "urlkey": "ux-and-sustainable-web-design",
-          "name": "UX and sustainable web design",
-          "id": 738272
-        },
-        {
-          "urlkey": "digital-marketing-analytics",
-          "name": "Digital Marketing Analytics",
-          "id": 785142
-        },
-        {
-          "urlkey": "ui-ux-design",
-          "name": "UI/UX design",
-          "id": 917292
-        },
-        {
-          "urlkey": "ux-ui",
-          "name": "UX/UI",
-          "id": 996032
-        },
-        {
-          "urlkey": "ux-creatives",
-          "name": "UX Creatives",
-          "id": 1233372
-        },
-        {
-          "urlkey": "ux-strategy",
-          "name": "UX Strategy",
-          "id": 1478052
-        },
-        {
-          "urlkey": "web",
-          "name": "Web Technology",
-          "id": 10209
-        },
-        {
-          "urlkey": "organizational-development",
-          "name": "organizational development",
-          "id": 18515
-        }
+
       ],
-      "joined": 1486993110000,
-      "link": "http://www.meetup.com/members/192164297",
-      "bio": "product, service and business innovator",
+      "joined": 1489437295000,
+      "link": "http://www.meetup.com/members/189298436",
       "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/3/1/e/b/highres_279552779.jpeg",
-        "photo_id": 279552779,
+        "highres_link": "https://secure.meetupstatic.com/photos/member/8/a/4/highres_275222212.jpeg",
+        "photo_id": 275222212,
         "base_url": "https://secure.meetupstatic.com",
         "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/3/1/e/b/member_279552779.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/3/1/e/b/thumb_279552779.jpeg"
+        "photo_link": "https://secure.meetupstatic.com/photos/member/8/a/4/member_275222212.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/8/a/4/thumb_275222212.jpeg"
       },
       "lon": 8.54,
-      "other_services": {},
-      "name": "Sev Oz",
-      "visited": 1504198087000,
-      "self": {
-        "common": {}
+      "other_services": {
+
       },
-      "id": 192164297,
+      "name": "Alia",
+      "visited": 1489437295000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 189298436,
       "lat": 47.38,
       "status": "active"
     },
@@ -1337,14 +1674,734 @@
         "thumb_link": "https://secure.meetupstatic.com/photos/member/6/d/d/b/thumb_275548123.jpeg"
       },
       "lon": 8.25,
-      "other_services": {},
+      "other_services": {
+
+      },
       "name": "Monika Werneke",
       "visited": 1521072971000,
       "self": {
-        "common": {}
+        "common": {
+
+        }
       },
       "id": 250251499,
       "lat": 46.91,
+      "status": "active"
+    },
+    {
+      "country": "ch",
+      "city": "Bern",
+      "topics": [
+        {
+          "urlkey": "newtech",
+          "name": "New Technology",
+          "id": 9696
+        },
+        {
+          "urlkey": "online-marketing",
+          "name": "Online Marketing",
+          "id": 15585
+        },
+        {
+          "urlkey": "apache-cordova",
+          "name": "Apache Cordova",
+          "id": 1318582
+        },
+        {
+          "urlkey": "asp-net",
+          "name": "ASP.NET",
+          "id": 16136
+        },
+        {
+          "urlkey": "ecommerce-marketing",
+          "name": "eCommerce Marketing",
+          "id": 805252
+        },
+        {
+          "urlkey": "angular-6",
+          "name": "Angular 6",
+          "id": 1517246
+        },
+        {
+          "urlkey": "entrepreneurship",
+          "name": "Entrepreneurship",
+          "id": 19882
+        },
+        {
+          "urlkey": "small-business-marketing-strategy",
+          "name": "Small Business Marketing Strategy",
+          "id": 17325
+        },
+        {
+          "urlkey": "angular-4",
+          "name": "Angular 4",
+          "id": 1514983
+        },
+        {
+          "urlkey": "wordpress",
+          "name": "WordPress",
+          "id": 8304
+        },
+        {
+          "urlkey": "startup-businesses",
+          "name": "Startup Businesses",
+          "id": 21681
+        },
+        {
+          "urlkey": "technology-startups",
+          "name": "Technology Startups",
+          "id": 108403
+        },
+        {
+          "urlkey": "internet-ecommerce",
+          "name": "E-Commerce",
+          "id": 27954
+        },
+        {
+          "urlkey": "csharp",
+          "name": "C#",
+          "id": 2260
+        },
+        {
+          "urlkey": "ionic-framework",
+          "name": "Ionic Framework",
+          "id": 1505698
+        },
+        {
+          "urlkey": "javascript",
+          "name": "JavaScript",
+          "id": 7029
+        },
+        {
+          "urlkey": "softwaredev",
+          "name": "Software Development",
+          "id": 3833
+        },
+        {
+          "urlkey": "wordpress-ecommerce",
+          "name": "WordPress eCommerce",
+          "id": 1516394
+        },
+        {
+          "urlkey": "web-development",
+          "name": "Web Development",
+          "id": 15582
+        },
+        {
+          "urlkey": "front-end-development",
+          "name": "Front-end Development",
+          "id": 100479
+        },
+        {
+          "urlkey": "javascript-frameworks",
+          "name": "JavaScript Frameworks",
+          "id": 85951
+        },
+        {
+          "urlkey": "building-an-online-business",
+          "name": "Building an Online Business",
+          "id": 15583
+        }
+      ],
+      "joined": 1539478366000,
+      "link": "http://www.meetup.com/members/264823010",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/a/3/b/0/highres_281261904.jpeg",
+        "photo_id": 281261904,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/a/3/b/0/member_281261904.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/a/3/b/0/thumb_281261904.jpeg"
+      },
+      "lon": 7.44,
+      "other_services": {
+
+      },
+      "name": "Patrick T. Happi",
+      "visited": 1539478366000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 264823010,
+      "lat": 46.95,
+      "status": "active"
+    },
+    {
+      "country": "ch",
+      "city": "Luzern",
+      "topics": [
+
+      ],
+      "joined": 1483269646000,
+      "link": "http://www.meetup.com/members/219010301",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/d/2/4/d/highres_262913837.jpeg",
+        "photo_id": 262913837,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/d/2/4/d/member_262913837.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/d/2/4/d/thumb_262913837.jpeg"
+      },
+      "lon": 8.3,
+      "other_services": {
+
+      },
+      "name": "Sara Wüest",
+      "visited": 1520087099000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 219010301,
+      "lat": 47.06,
+      "status": "active"
+    },
+    {
+      "country": "ch",
+      "city": "Zug",
+      "topics": [
+        {
+          "urlkey": "graphicdesign",
+          "name": "Graphic Design",
+          "id": 781
+        },
+        {
+          "urlkey": "social",
+          "name": "Social",
+          "id": 10581
+        },
+        {
+          "urlkey": "exhibitions-and-local-events",
+          "name": "Exhibitions and Local Events",
+          "id": 86581
+        },
+        {
+          "urlkey": "photo",
+          "name": "Photography",
+          "id": 223
+        },
+        {
+          "urlkey": "diningout",
+          "name": "Dining Out",
+          "id": 713
+        },
+        {
+          "urlkey": "livemusic",
+          "name": "Live Music",
+          "id": 8652
+        },
+        {
+          "urlkey": "ixd",
+          "name": "Interaction Design",
+          "id": 10110
+        },
+        {
+          "urlkey": "social-media",
+          "name": "Social Media",
+          "id": 15401
+        },
+        {
+          "urlkey": "user-experience",
+          "name": "User Experience",
+          "id": 19243
+        },
+        {
+          "urlkey": "usability",
+          "name": "Usability",
+          "id": 26938
+        },
+        {
+          "urlkey": "travel",
+          "name": "Travel",
+          "id": 1998
+        },
+        {
+          "urlkey": "outdoors",
+          "name": "Outdoors",
+          "id": 15046
+        },
+        {
+          "urlkey": "indoor-volleyball",
+          "name": "Indoor Volleyball",
+          "id": 22155
+        },
+        {
+          "urlkey": "volleyball-social",
+          "name": "Volleyball Social",
+          "id": 23852
+        },
+        {
+          "urlkey": "volleyball",
+          "name": "Volleyball",
+          "id": 705
+        },
+        {
+          "urlkey": "art",
+          "name": "Art",
+          "id": 1502
+        },
+        {
+          "urlkey": "concerts",
+          "name": "Concerts",
+          "id": 18909
+        },
+        {
+          "urlkey": "creative",
+          "name": "Creativity",
+          "id": 36229
+        },
+        {
+          "urlkey": "fitness",
+          "name": "Fitness",
+          "id": 242
+        },
+        {
+          "urlkey": "music",
+          "name": "Music",
+          "id": 15018
+        },
+        {
+          "urlkey": "20s-30s-social",
+          "name": "20's & 30's Social",
+          "id": 17201
+        },
+        {
+          "urlkey": "dancing",
+          "name": "Dancing",
+          "id": 17571
+        },
+        {
+          "urlkey": "eating-drinking-talking-laughing-etc",
+          "name": "Eating, Drinking, Talking, Laughing, Etc",
+          "id": 19130
+        },
+        {
+          "urlkey": "movies",
+          "name": "Watching Movies",
+          "id": 1201
+        },
+        {
+          "urlkey": "girls-having-fun",
+          "name": "Girls having fun",
+          "id": 15413
+        },
+        {
+          "urlkey": "beach-volleyball",
+          "name": "Beach Volleyball",
+          "id": 18266
+        },
+        {
+          "urlkey": "hiphop",
+          "name": "Hip Hop",
+          "id": 128
+        },
+        {
+          "urlkey": "jazz",
+          "name": "Jazz",
+          "id": 131
+        },
+        {
+          "urlkey": "hiking",
+          "name": "Hiking",
+          "id": 638
+        },
+        {
+          "urlkey": "pilates",
+          "name": "Pilates",
+          "id": 3918
+        },
+        {
+          "urlkey": "craftswap",
+          "name": "Crafts",
+          "id": 10099
+        },
+        {
+          "urlkey": "diy",
+          "name": "DIY (Do It Yourself)",
+          "id": 10438
+        },
+        {
+          "urlkey": "sports",
+          "name": "Sports and Recreation",
+          "id": 10451
+        },
+        {
+          "urlkey": "film",
+          "name": "Film",
+          "id": 15029
+        },
+        {
+          "urlkey": "conversation",
+          "name": "Conversation",
+          "id": 15099
+        },
+        {
+          "urlkey": "fun-times",
+          "name": "Fun Times",
+          "id": 15117
+        },
+        {
+          "urlkey": "group-fitness-training",
+          "name": "Group Fitness Training",
+          "id": 15394
+        },
+        {
+          "urlkey": "outdoor-fitness",
+          "name": "Outdoor  Fitness",
+          "id": 15672
+        },
+        {
+          "urlkey": "travel-photography",
+          "name": "Travel Photography",
+          "id": 16207
+        },
+        {
+          "urlkey": "fashion-and-style",
+          "name": "Fashion and Style",
+          "id": 16575
+        },
+        {
+          "urlkey": "happy-hours",
+          "name": "Happy Hour",
+          "id": 16800
+        },
+        {
+          "urlkey": "outdoor-adventures",
+          "name": "Outdoor Adventures",
+          "id": 16967
+        },
+        {
+          "urlkey": "water-sports",
+          "name": "Water Sports",
+          "id": 17437
+        },
+        {
+          "urlkey": "film-and-video-production",
+          "name": "Film and Video Production",
+          "id": 20021
+        },
+        {
+          "urlkey": "arts-crafts-show-sale-fairs",
+          "name": "Arts & Crafts - Show & Sale Fairs",
+          "id": 23402
+        },
+        {
+          "urlkey": "movies-in-movie-theaters",
+          "name": "Movies in Movie Theaters",
+          "id": 43390
+        }
+      ],
+      "joined": 1490191771000,
+      "link": "http://www.meetup.com/members/79474382",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/3/7/b/highres_260760891.jpeg",
+        "photo_id": 260760891,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/3/7/b/member_260760891.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/3/7/b/thumb_260760891.jpeg"
+      },
+      "lon": 8.52,
+      "other_services": {
+        "twitter": {
+          "identifier": "@diana_bee_"
+        }
+      },
+      "name": "Diana B.",
+      "visited": 1490191771000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 79474382,
+      "lat": 47.18,
+      "status": "active"
+    },
+    {
+      "country": "li",
+      "hometown": "Schellenberg",
+      "city": "Schaan",
+      "topics": [
+
+      ],
+      "joined": 1523397111000,
+      "link": "http://www.meetup.com/members/202049637",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/2/f/8/5/highres_276252165.jpeg",
+        "photo_id": 276252165,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/2/f/8/5/member_276252165.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/2/f/8/5/thumb_276252165.jpeg"
+      },
+      "lon": 9.51,
+      "other_services": {
+        "tumblr": {
+          "identifier": "https://peterhuerlimann.tumblr.com"
+        },
+        "twitter": {
+          "identifier": "@peterhuerlimann"
+        },
+        "flickr": {
+          "identifier": "https://www.flickr.com/photos/peterhuerlimann/"
+        }
+      },
+      "name": "Peter Hürlimann",
+      "visited": 1523397111000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 202049637,
+      "lat": 47.17,
+      "status": "active"
+    },
+    {
+      "country": "ch",
+      "city": "Luzern",
+      "topics": [
+
+      ],
+      "joined": 1490036929000,
+      "link": "http://www.meetup.com/members/224130596",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/e/9/6/e/highres_265319758.jpeg",
+        "photo_id": 265319758,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/e/9/6/e/member_265319758.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/e/9/6/e/thumb_265319758.jpeg"
+      },
+      "lon": 8.3,
+      "other_services": {
+
+      },
+      "name": "Marcel Amann",
+      "visited": 1490044534000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 224130596,
+      "lat": 47.06,
+      "status": "active"
+    },
+    {
+      "country": "ch",
+      "city": "Zürich",
+      "topics": [
+        {
+          "urlkey": "newtech",
+          "name": "New Technology",
+          "id": 9696
+        },
+        {
+          "urlkey": "lean-startup",
+          "name": "Lean Startup",
+          "id": 38660
+        },
+        {
+          "urlkey": "webdesign",
+          "name": "Web Design",
+          "id": 659
+        },
+        {
+          "urlkey": "cms",
+          "name": "CMS (Content Management Systems)",
+          "id": 28990
+        },
+        {
+          "urlkey": "php",
+          "name": "PHP",
+          "id": 455
+        },
+        {
+          "urlkey": "zukunft-gestalten",
+          "name": "Zukunft gestalten",
+          "id": 1510355
+        },
+        {
+          "urlkey": "digitale-transformation",
+          "name": "Digitale Transformation",
+          "id": 1503729
+        },
+        {
+          "urlkey": "psychology",
+          "name": "Psychology",
+          "id": 3485
+        },
+        {
+          "urlkey": "environmental-awareness",
+          "name": "Environmental Awareness",
+          "id": 23842
+        },
+        {
+          "urlkey": "virtual-reality",
+          "name": "Virtual Reality",
+          "id": 26062
+        },
+        {
+          "urlkey": "augmented-reality",
+          "name": "Augmented Reality",
+          "id": 26061
+        },
+        {
+          "urlkey": "mixed-reality",
+          "name": "Mixed Reality",
+          "id": 98101
+        },
+        {
+          "urlkey": "immersive-tech",
+          "name": "Immersive Tech",
+          "id": 26064
+        },
+        {
+          "urlkey": "virtual-worlds",
+          "name": "Virtual Worlds",
+          "id": 90683
+        },
+        {
+          "urlkey": "oculus-rift",
+          "name": "Oculus Rift",
+          "id": 1450592
+        },
+        {
+          "urlkey": "human-computer-interaction",
+          "name": "Human-Computer Interaction",
+          "id": 71162
+        },
+        {
+          "urlkey": "social-augmented-reality",
+          "name": "Social Augmented Reality",
+          "id": 68717
+        },
+        {
+          "urlkey": "vr-glasses",
+          "name": "VR Glasses",
+          "id": 1450602
+        }
+      ],
+      "joined": 1498786934000,
+      "link": "http://www.meetup.com/members/216297858",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/5/5/e/3/highres_267561987.jpeg",
+        "photo_id": 267561987,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/5/5/e/3/member_267561987.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/5/5/e/3/thumb_267561987.jpeg"
+      },
+      "lon": 8.54,
+      "other_services": {
+
+      },
+      "name": "Tom",
+      "visited": 1504121934000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 216297858,
+      "lat": 47.38,
+      "status": "active"
+    },
+    {
+      "country": "ch",
+      "city": "Bern",
+      "topics": [
+        {
+          "urlkey": "dotnet",
+          "name": ".NET",
+          "id": 827
+        },
+        {
+          "urlkey": "csharp",
+          "name": "C#",
+          "id": 2260
+        },
+        {
+          "urlkey": "softwaredev",
+          "name": "Software Development",
+          "id": 3833
+        },
+        {
+          "urlkey": "web-development",
+          "name": "Web Development",
+          "id": 15582
+        },
+        {
+          "urlkey": "programming-languages",
+          "name": "Programming Languages",
+          "id": 17628
+        },
+        {
+          "urlkey": "publicspeaking",
+          "name": "Public Speaking",
+          "id": 9300
+        },
+        {
+          "urlkey": "asp-net",
+          "name": "ASP.NET",
+          "id": 16136
+        },
+        {
+          "urlkey": "big-data",
+          "name": "Big Data",
+          "id": 18062
+        },
+        {
+          "urlkey": "cloud-computing",
+          "name": "Cloud Computing",
+          "id": 15167
+        },
+        {
+          "urlkey": "agile-project-management",
+          "name": "Agile Project Management",
+          "id": 21549
+        },
+        {
+          "urlkey": "knowledge-sharing",
+          "name": "Knowledge Sharing",
+          "id": 65780
+        },
+        {
+          "urlkey": "azure",
+          "name": "Azure",
+          "id": 1137362
+        }
+      ],
+      "joined": 1478936526000,
+      "link": "http://www.meetup.com/members/183515544",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/8/f/f/0/highres_243456848.jpeg",
+        "photo_id": 243456848,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/8/f/f/0/member_243456848.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/8/f/f/0/thumb_243456848.jpeg"
+      },
+      "lon": 7.44,
+      "other_services": {
+        "twitter": {
+          "identifier": "@rolandkru"
+        }
+      },
+      "name": "Roland Krummenacher",
+      "visited": 1539237220000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 183515544,
+      "lat": 46.95,
       "status": "active"
     },
     {
@@ -1614,11 +2671,15 @@
         "thumb_link": "https://secure.meetupstatic.com/photos/member/3/9/d/3/thumb_276314803.jpeg"
       },
       "lon": 8.54,
-      "other_services": {},
+      "other_services": {
+
+      },
       "name": "Lisa_marmal",
-      "visited": 1538128973000,
+      "visited": 1539461170000,
       "self": {
-        "common": {}
+        "common": {
+
+        }
       },
       "id": 245470086,
       "lat": 47.38,
@@ -1629,169 +2690,34 @@
       "city": "Luzern",
       "topics": [
         {
-          "urlkey": "latinmusic",
-          "name": "Latin Music",
-          "id": 130
-        },
-        {
-          "urlkey": "lean-startup",
-          "name": "Lean Startup",
-          "id": 38660
-        },
-        {
-          "urlkey": "creative",
-          "name": "Creativity",
-          "id": 36229
-        },
-        {
-          "urlkey": "fun-times",
-          "name": "Fun Times",
-          "id": 15117
-        },
-        {
-          "urlkey": "adventure",
-          "name": "Adventure",
-          "id": 15892
-        },
-        {
-          "urlkey": "animals",
-          "name": "Animals",
-          "id": 37663
-        },
-        {
-          "urlkey": "innovation",
-          "name": "Innovation",
-          "id": 1954
-        },
-        {
-          "urlkey": "dog-play-groups",
-          "name": "Dog Playgroups",
-          "id": 18340
-        },
-        {
-          "urlkey": "culture-exchange",
-          "name": "Culture Exchange",
-          "id": 67622
-        },
-        {
-          "urlkey": "paper-crafts",
-          "name": "Paper Crafts",
-          "id": 17320
-        },
-        {
-          "urlkey": "businessintell",
-          "name": "Business Intelligence",
-          "id": 10538
-        },
-        {
-          "urlkey": "music",
-          "name": "Music",
-          "id": 15018
-        },
-        {
-          "urlkey": "activedogs",
-          "name": "Active Dogs",
-          "id": 9772
-        },
-        {
-          "urlkey": "musicians",
-          "name": "Musicians",
-          "id": 173
-        },
-        {
-          "urlkey": "startup-businesses",
-          "name": "Startup Businesses",
-          "id": 21681
-        },
-        {
-          "urlkey": "dog-walks",
-          "name": "Dog Walks",
-          "id": 18874
-        },
-        {
-          "urlkey": "beauty",
-          "name": "Beauty",
-          "id": 63675
-        },
-        {
-          "urlkey": "pets-animals",
-          "name": "Pets",
-          "id": 53052
-        },
-        {
-          "urlkey": "boston-artists",
-          "name": "Artists",
-          "id": 16573
-        },
-        {
-          "urlkey": "fashion-and-style",
-          "name": "Fashion and Style",
-          "id": 16575
-        },
-        {
-          "urlkey": "beer",
-          "name": "Beer",
-          "id": 1475
-        },
-        {
-          "urlkey": "bike",
-          "name": "Bicycling",
-          "id": 579
-        },
-        {
-          "urlkey": "photography-classes",
-          "name": "Photography Classes",
-          "id": 15043
-        },
-        {
           "urlkey": "outdoors",
           "name": "Outdoors",
           "id": 15046
         },
         {
-          "urlkey": "diy",
-          "name": "DIY (Do It Yourself)",
-          "id": 10438
+          "urlkey": "databasepro",
+          "name": "Database Professionals",
+          "id": 1245
         },
         {
-          "urlkey": "outdoor-adventures",
-          "name": "Outdoor Adventures",
-          "id": 16967
+          "urlkey": "oracle",
+          "name": "Oracle",
+          "id": 2544
         },
         {
-          "urlkey": "make-new-friends-from-all-walks-of-life",
-          "name": "Make New Friends, from all Walks of Life",
-          "id": 17225
+          "urlkey": "database-development",
+          "name": "Database Development",
+          "id": 21506
         },
         {
-          "urlkey": "diningout",
-          "name": "Dining Out",
-          "id": 713
+          "urlkey": "data-analytics",
+          "name": "Data Analytics",
+          "id": 30928
         },
         {
-          "urlkey": "handmade-crafts",
-          "name": "Handmade Crafts",
-          "id": 16459
-        },
-        {
-          "urlkey": "collaboration",
-          "name": "Collaboration",
-          "id": 21067
-        },
-        {
-          "urlkey": "social-media-for-business",
-          "name": "Social Media for Business",
-          "id": 37708
-        },
-        {
-          "urlkey": "livemusic",
-          "name": "Live Music",
-          "id": 8652
-        },
-        {
-          "urlkey": "digcam",
-          "name": "Digital Photography",
-          "id": 206
+          "urlkey": "java",
+          "name": "Java",
+          "id": 189
         },
         {
           "urlkey": "travel",
@@ -1799,161 +2725,167 @@
           "id": 1998
         },
         {
-          "urlkey": "language",
-          "name": "Language & Culture",
-          "id": 10454
+          "urlkey": "mind",
+          "name": "Mind",
+          "id": 21548
         },
         {
-          "urlkey": "collaboration-between-creative-minds",
-          "name": "Collaboration between Creative Minds",
-          "id": 29526
+          "urlkey": "psychology",
+          "name": "Psychology",
+          "id": 3485
         },
         {
-          "urlkey": "dogs",
-          "name": "Dogs",
-          "id": 15067
+          "urlkey": "behavioral-psychology",
+          "name": "Behavioral Psychology",
+          "id": 97313
         },
         {
-          "urlkey": "art",
-          "name": "Art",
-          "id": 1502
+          "urlkey": "jungian-psychology",
+          "name": "Jungian psychology",
+          "id": 20074
         },
         {
-          "urlkey": "photo",
-          "name": "Photography",
-          "id": 223
+          "urlkey": "agile-project-management",
+          "name": "Agile Project Management",
+          "id": 21549
         },
         {
-          "urlkey": "having-fun",
-          "name": "Having Fun",
-          "id": 20705
-        },
-        {
-          "urlkey": "online-marketing",
-          "name": "Online Marketing",
-          "id": 15585
-        },
-        {
-          "urlkey": "business-strategy",
-          "name": "Business Strategy",
-          "id": 17635
-        },
-        {
-          "urlkey": "wine",
-          "name": "Wine",
-          "id": 611
-        },
-        {
-          "urlkey": "language-exchange",
-          "name": "Language Exchange",
-          "id": 26212
-        },
-        {
-          "urlkey": "makers",
-          "name": "Makers",
-          "id": 43887
-        },
-        {
-          "urlkey": "craftswap",
-          "name": "Crafts",
-          "id": 10099
-        },
-        {
-          "urlkey": "makeovers",
-          "name": "Makeovers",
-          "id": 4475
-        },
-        {
-          "urlkey": "pubs-bars",
-          "name": "Pubs and Bars",
-          "id": 19195
-        },
-        {
-          "urlkey": "group-singing",
-          "name": "Group Singing",
-          "id": 54268
-        },
-        {
-          "urlkey": "food-and-drink",
-          "name": "Food and Drink",
-          "id": 87548
+          "urlkey": "lean-project-management",
+          "name": "Lean Project Management",
+          "id": 118991
         }
       ],
-      "joined": 1523955836000,
-      "link": "http://www.meetup.com/members/252574480",
+      "joined": 1537163164000,
+      "link": "http://www.meetup.com/members/188070960",
       "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/a/8/b/e/highres_276463198.jpeg",
-        "photo_id": 276463198,
+        "highres_link": "https://secure.meetupstatic.com/photos/member/a/e/9/6/highres_279404694.jpeg",
+        "photo_id": 279404694,
         "base_url": "https://secure.meetupstatic.com",
         "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/a/8/b/e/member_276463198.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/a/8/b/e/thumb_276463198.jpeg"
+        "photo_link": "https://secure.meetupstatic.com/photos/member/a/e/9/6/member_279404694.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/a/e/9/6/thumb_279404694.jpeg"
       },
       "lon": 8.3,
-      "other_services": {},
-      "name": "Filipe Sa",
-      "visited": 1523955836000,
-      "self": {
-        "common": {}
+      "other_services": {
+
       },
-      "id": 252574480,
+      "name": "Aleks",
+      "visited": 1538814861000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 188070960,
       "lat": 47.06,
       "status": "active"
     },
     {
       "country": "ch",
-      "city": "Schwyz",
-      "topics": [],
-      "joined": 1510091086000,
-      "link": "http://www.meetup.com/members/240712283",
+      "city": "Zürich",
+      "topics": [
+        {
+          "urlkey": "opensource",
+          "name": "Open Source",
+          "id": 563
+        },
+        {
+          "urlkey": "softwaredev",
+          "name": "Software Development",
+          "id": 3833
+        },
+        {
+          "urlkey": "javascript",
+          "name": "JavaScript",
+          "id": 7029
+        },
+        {
+          "urlkey": "newtech",
+          "name": "New Technology",
+          "id": 9696
+        },
+        {
+          "urlkey": "technology",
+          "name": "Technology",
+          "id": 10579
+        },
+        {
+          "urlkey": "web-development",
+          "name": "Web Development",
+          "id": 15582
+        },
+        {
+          "urlkey": "user-experience",
+          "name": "User Experience",
+          "id": 19243
+        },
+        {
+          "urlkey": "usability",
+          "name": "Usability",
+          "id": 26938
+        },
+        {
+          "urlkey": "computer-programming",
+          "name": "Computer programming",
+          "id": 48471
+        },
+        {
+          "urlkey": "nosql",
+          "name": "NoSQL",
+          "id": 58162
+        },
+        {
+          "urlkey": "html5",
+          "name": "HTML5",
+          "id": 78565
+        },
+        {
+          "urlkey": "javascript-frameworks",
+          "name": "JavaScript Frameworks",
+          "id": 85951
+        },
+        {
+          "urlkey": "mobile-technology",
+          "name": "Mobile Technology",
+          "id": 16216
+        },
+        {
+          "urlkey": "functional-programming",
+          "name": "Functional Programming",
+          "id": 22792
+        }
+      ],
+      "joined": 1479810582000,
+      "link": "http://www.meetup.com/members/14220850",
       "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/1/d/8/9/highres_280927561.jpeg",
-        "photo_id": 280927561,
+        "highres_link": "https://secure.meetupstatic.com/photos/member/2/2/4/8/highres_259868776.jpeg",
+        "photo_id": 259868776,
         "base_url": "https://secure.meetupstatic.com",
         "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/1/d/8/9/member_280927561.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/1/d/8/9/thumb_280927561.jpeg"
+        "photo_link": "https://secure.meetupstatic.com/photos/member/2/2/4/8/member_259868776.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/2/2/4/8/thumb_259868776.jpeg"
       },
-      "lon": 8.66,
-      "other_services": {},
-      "name": "Nikzad",
-      "visited": 1535638451000,
+      "lon": 8.54,
+      "other_services": {
+
+      },
+      "name": "Florian Untern\u00e4hrer",
+      "visited": 1516093496000,
       "self": {
-        "common": {}
+        "common": {
+
+        }
       },
-      "id": 240712283,
-      "lat": 47.02,
-      "status": "active"
-    },
-    {
-      "country": "es",
-      "city": "Barcelona",
-      "topics": [],
-      "joined": 1513526065000,
-      "link": "http://www.meetup.com/members/244090059",
-      "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/2/8/3/f/highres_273250303.jpeg",
-        "photo_id": 273250303,
-        "base_url": "https://secure.meetupstatic.com",
-        "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/2/8/3/f/member_273250303.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/2/8/3/f/thumb_273250303.jpeg"
-      },
-      "lon": 2.17,
-      "other_services": {},
-      "name": "Mark",
-      "visited": 1525105416000,
-      "self": {
-        "common": {}
-      },
-      "id": 244090059,
-      "lat": 41.4,
+      "id": 14220850,
+      "lat": 47.38,
       "status": "active"
     },
     {
       "country": "ch",
       "city": "Zug",
-      "topics": [],
+      "topics": [
+
+      ],
       "joined": 1501662890000,
       "link": "http://www.meetup.com/members/225155902",
       "bio": "Founder & CEO, Indus Finch Group (indusfinch.ch). We are a Zug-based software development company. We create custom-solutions for our customers using all kinds of tech - including Blockchain and AI for legal, IoT, realestate and crypto applications.",
@@ -1974,380 +2906,20 @@
       "name": "Raj Unny",
       "visited": 1504087364000,
       "self": {
-        "common": {}
+        "common": {
+
+        }
       },
       "id": 225155902,
       "lat": 47.18,
       "status": "active"
     },
     {
-      "country": "ch",
-      "hometown": "Zurich",
-      "city": "Zürich",
-      "topics": [],
-      "joined": 1489437295000,
-      "link": "http://www.meetup.com/members/189298436",
-      "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/8/a/4/highres_275222212.jpeg",
-        "photo_id": 275222212,
-        "base_url": "https://secure.meetupstatic.com",
-        "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/8/a/4/member_275222212.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/8/a/4/thumb_275222212.jpeg"
+      "birthday": {
+        "year": 1993
       },
-      "lon": 8.54,
-      "other_services": {},
-      "name": "Alia",
-      "visited": 1489437295000,
-      "self": {
-        "common": {}
-      },
-      "id": 189298436,
-      "lat": 47.38,
-      "status": "active"
-    },
-    {
       "country": "ch",
       "city": "Luzern",
-      "topics": [
-        {
-          "urlkey": "drinking",
-          "name": "Drinking",
-          "id": 15546
-        },
-        {
-          "urlkey": "outdoors",
-          "name": "Outdoors",
-          "id": 15046
-        }
-      ],
-      "joined": 1487426225000,
-      "link": "http://www.meetup.com/members/219978067",
-      "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/8/5/d/7/highres_264334263.jpeg",
-        "photo_id": 264334263,
-        "base_url": "https://secure.meetupstatic.com",
-        "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/8/5/d/7/member_264334263.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/8/5/d/7/thumb_264334263.jpeg"
-      },
-      "lon": 8.3,
-      "other_services": {},
-      "name": "Oliver Obrecht",
-      "visited": 1523423927000,
-      "self": {
-        "common": {}
-      },
-      "id": 219978067,
-      "state": "11",
-      "lat": 47.05,
-      "status": "active"
-    },
-    {
-      "country": "ch",
-      "city": "Luzern",
-      "topics": [
-        {
-          "urlkey": "opensource",
-          "name": "Open Source",
-          "id": 563
-        },
-        {
-          "urlkey": "agile-testing",
-          "name": "Agile Testing",
-          "id": 30996
-        },
-        {
-          "urlkey": "software-quality",
-          "name": "Software Quality",
-          "id": 65173
-        },
-        {
-          "urlkey": "newtech",
-          "name": "New Technology",
-          "id": 9696
-        },
-        {
-          "urlkey": "agile-project-management",
-          "name": "Agile Project Management",
-          "id": 21549
-        },
-        {
-          "urlkey": "test-automation",
-          "name": "Test Automation",
-          "id": 65172
-        },
-        {
-          "urlkey": "digcam",
-          "name": "Digital Photography",
-          "id": 206
-        },
-        {
-          "urlkey": "photo",
-          "name": "Photography",
-          "id": 223
-        },
-        {
-          "urlkey": "point-and-shoot-photography",
-          "name": "Point and Shoot Photography",
-          "id": 15904
-        },
-        {
-          "urlkey": "travel-photography",
-          "name": "Travel Photography",
-          "id": 16207
-        },
-        {
-          "urlkey": "nature-photography",
-          "name": "Nature Photography",
-          "id": 16600
-        },
-        {
-          "urlkey": "portrait-photography",
-          "name": "Portrait Photography",
-          "id": 16613
-        },
-        {
-          "urlkey": "fine-art-photography",
-          "name": "Fine Art Photography",
-          "id": 19451
-        },
-        {
-          "urlkey": "landscape-photography",
-          "name": "Landscape Photography",
-          "id": 22268
-        },
-        {
-          "urlkey": "amateur-photography",
-          "name": "Amateur Photography",
-          "id": 24533
-        },
-        {
-          "urlkey": "photography-on-location-using-natural-light",
-          "name": "Photography on Location-Using Natural Light.",
-          "id": 26111
-        },
-        {
-          "urlkey": "night-photography",
-          "name": "Night Photography",
-          "id": 32968
-        },
-        {
-          "urlkey": "outdoor-photography",
-          "name": "Outdoor Photography",
-          "id": 39879
-        },
-        {
-          "urlkey": "iphone-photography",
-          "name": "iPhone Photography",
-          "id": 41930
-        },
-        {
-          "urlkey": "sports-photography",
-          "name": "Sports Photography",
-          "id": 42377
-        },
-        {
-          "urlkey": "glamour-photography",
-          "name": "Glamour Photography",
-          "id": 48375
-        },
-        {
-          "urlkey": "business-strategy",
-          "name": "Business Strategy",
-          "id": 17635
-        }
-      ],
-      "joined": 1478929720000,
-      "link": "http://www.meetup.com/members/182477733",
-      "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/d/5/4/1/highres_243414593.jpeg",
-        "photo_id": 243414593,
-        "base_url": "https://secure.meetupstatic.com",
-        "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/d/5/4/1/member_243414593.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/d/5/4/1/thumb_243414593.jpeg"
-      },
-      "lon": 8.3,
-      "other_services": {},
-      "name": "Kai",
-      "visited": 1526567605000,
-      "self": {
-        "common": {}
-      },
-      "id": 182477733,
-      "lat": 47.06,
-      "status": "active"
-    },
-    {
-      "country": "ch",
-      "city": "Zürich",
-      "topics": [
-        {
-          "urlkey": "ia",
-          "name": "Information Architecture",
-          "id": 1369
-        },
-        {
-          "urlkey": "ixd",
-          "name": "Interaction Design",
-          "id": 10110
-        },
-        {
-          "urlkey": "user-experience",
-          "name": "User Experience",
-          "id": 19243
-        },
-        {
-          "urlkey": "usability",
-          "name": "Usability",
-          "id": 26938
-        },
-        {
-          "urlkey": "user-research",
-          "name": "User Research",
-          "id": 49541
-        },
-        {
-          "urlkey": "innovation",
-          "name": "Innovation",
-          "id": 1954
-        },
-        {
-          "urlkey": "agile-project-management",
-          "name": "Agile Project Management",
-          "id": 21549
-        },
-        {
-          "urlkey": "rapid-prototyping",
-          "name": "rapid prototyping",
-          "id": 54077
-        },
-        {
-          "urlkey": "agile-planning",
-          "name": "Agile Planning",
-          "id": 927602
-        },
-        {
-          "urlkey": "scrum",
-          "name": "Scrum",
-          "id": 10043
-        },
-        {
-          "urlkey": "design-thinking",
-          "name": "Design Thinking",
-          "id": 77906
-        },
-        {
-          "urlkey": "all-art-of-photography",
-          "name": "All Art of Photography",
-          "id": 200001
-        },
-        {
-          "urlkey": "fda-requirements-for-pharmaceutical-companies",
-          "name": "FDA requirements for Pharmaceutical companies",
-          "id": 280751
-        },
-        {
-          "urlkey": "bookclub",
-          "name": "Book Club",
-          "id": 2767
-        },
-        {
-          "urlkey": "web-development",
-          "name": "Web Development",
-          "id": 15582
-        },
-        {
-          "urlkey": "mobile-technology",
-          "name": "Mobile Technology",
-          "id": 16216
-        },
-        {
-          "urlkey": "user-interface-design",
-          "name": "User Interface Design",
-          "id": 104717
-        },
-        {
-          "urlkey": "user-centered-design",
-          "name": "User Centered Design",
-          "id": 278371
-        },
-        {
-          "urlkey": "webdesign",
-          "name": "Web Design",
-          "id": 659
-        },
-        {
-          "urlkey": "newtech",
-          "name": "New Technology",
-          "id": 9696
-        }
-      ],
-      "joined": 1486976350000,
-      "link": "http://www.meetup.com/members/52043952",
-      "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/1/e/d/4/highres_59287892.jpeg",
-        "photo_id": 59287892,
-        "base_url": "https://secure.meetupstatic.com",
-        "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/1/e/d/4/member_59287892.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/1/e/d/4/thumb_59287892.jpeg"
-      },
-      "lon": 8.54,
-      "other_services": {
-        "twitter": {
-          "identifier": "@Kelendan"
-        }
-      },
-      "name": "Patrick Labud",
-      "visited": 1488549793000,
-      "self": {
-        "common": {}
-      },
-      "id": 52043952,
-      "lat": 47.38,
-      "status": "active"
-    },
-    {
-      "country": "li",
-      "hometown": "Schellenberg",
-      "city": "Schaan",
-      "topics": [],
-      "joined": 1523397111000,
-      "link": "http://www.meetup.com/members/202049637",
-      "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/2/f/8/5/highres_276252165.jpeg",
-        "photo_id": 276252165,
-        "base_url": "https://secure.meetupstatic.com",
-        "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/2/f/8/5/member_276252165.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/2/f/8/5/thumb_276252165.jpeg"
-      },
-      "lon": 9.51,
-      "other_services": {
-        "tumblr": {
-          "identifier": "https://peterhuerlimann.tumblr.com"
-        },
-        "twitter": {
-          "identifier": "@peterhuerlimann"
-        },
-        "flickr": {
-          "identifier": "https://www.flickr.com/photos/peterhuerlimann/"
-        }
-      },
-      "name": "Peter Hürlimann",
-      "visited": 1523397111000,
-      "self": {
-        "common": {}
-      },
-      "id": 202049637,
-      "lat": 47.17,
-      "status": "active"
-    },
-    {
-      "country": "ch",
-      "city": "Bern",
       "topics": [
         {
           "urlkey": "softwaredev",
@@ -2355,19 +2927,9 @@
           "id": 3833
         },
         {
-          "urlkey": "beer",
-          "name": "Beer",
-          "id": 1475
-        },
-        {
-          "urlkey": "cloud-computing",
-          "name": "Cloud Computing",
-          "id": 15167
-        },
-        {
-          "urlkey": "javascript",
-          "name": "JavaScript",
-          "id": 7029
+          "urlkey": "newtech",
+          "name": "New Technology",
+          "id": 9696
         },
         {
           "urlkey": "mobile-development",
@@ -2375,140 +2937,75 @@
           "id": 21441
         },
         {
-          "urlkey": "computer-programming",
-          "name": "Computer programming",
-          "id": 48471
-        },
-        {
-          "urlkey": "mobile-technology",
-          "name": "Mobile Technology",
-          "id": 16216
-        },
-        {
-          "urlkey": "webdesign",
-          "name": "Web Design",
-          "id": 659
-        },
-        {
-          "urlkey": "web",
-          "name": "Web Technology",
-          "id": 10209
-        },
-        {
-          "urlkey": "web-development",
-          "name": "Web Development",
-          "id": 15582
-        },
-        {
-          "urlkey": "opensource",
-          "name": "Open Source",
-          "id": 563
-        },
-        {
-          "urlkey": "alternativeenergy",
-          "name": "Alternative Energy",
-          "id": 1980
-        },
-        {
-          "urlkey": "ai",
-          "name": "Artificial Intelligence",
-          "id": 456
-        },
-        {
-          "urlkey": "artificial-intelligence-applications",
-          "name": "Artificial Intelligence Applications",
-          "id": 90163
-        },
-        {
-          "urlkey": "artificial-general-intelligence",
-          "name": "Artificial General Intelligence",
-          "id": 127757
-        },
-        {
-          "urlkey": "artificial-intelligence-machine-learning-robotics",
-          "name": "Artificial Intelligence Machine Learning Robotics",
-          "id": 1448582
-        },
-        {
-          "urlkey": "artificial-intelligence-programming",
-          "name": "Artificial Intelligence Programming",
-          "id": 745722
-        },
-        {
-          "urlkey": "big-data",
-          "name": "Big Data",
-          "id": 18062
-        },
-        {
-          "urlkey": "deep-learning",
-          "name": "Deep Learning",
-          "id": 1456952
-        },
-        {
-          "urlkey": "humanoid-robots",
-          "name": "Humanoid Robots",
-          "id": 135858
-        },
-        {
-          "urlkey": "newtech",
-          "name": "New Technology",
-          "id": 9696
-        },
-        {
-          "urlkey": "robotics",
-          "name": "Robotics",
-          "id": 682
-        },
-        {
-          "urlkey": "neural-networks",
-          "name": "Neural Networks",
-          "id": 39679
-        },
-        {
-          "urlkey": "natural-language-processing",
-          "name": "Natural Language Processing",
-          "id": 24553
-        },
-        {
-          "urlkey": "machine-learning",
-          "name": "Machine Learning",
-          "id": 29971
-        },
-        {
-          "urlkey": "https",
-          "name": "HTTPS",
-          "id": 1508291
+          "urlkey": "cloud-computing",
+          "name": "Cloud Computing",
+          "id": 15167
         }
       ],
-      "joined": 1503646122000,
-      "link": "http://www.meetup.com/members/205313193",
+      "joined": 1479201138000,
+      "link": "http://www.meetup.com/members/216711932",
       "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/d/5/9/d/highres_256614685.jpeg",
-        "photo_id": 256614685,
+        "highres_link": "https://secure.meetupstatic.com/photos/member/a/9/d/0/highres_263383472.jpeg",
+        "photo_id": 263383472,
         "base_url": "https://secure.meetupstatic.com",
         "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/d/5/9/d/member_256614685.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/d/5/9/d/thumb_256614685.jpeg"
+        "photo_link": "https://secure.meetupstatic.com/photos/member/a/9/d/0/member_263383472.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/a/9/d/0/thumb_263383472.jpeg"
       },
-      "lon": 7.44,
-      "other_services": {},
-      "name": "Roman Ackermann",
-      "visited": 1537651591000,
+      "lon": 8.3000001907349,
+      "other_services": {
+
+      },
+      "name": "Loana Albisser",
+      "visited": 1539322658000,
       "self": {
-        "common": {}
+        "common": {
+
+        }
       },
-      "id": 205313193,
-      "lat": 46.95,
+      "id": 216711932,
+      "lang": "de_DE",
+      "lat": 47.060001373291,
       "status": "active"
     },
     {
       "country": "ch",
-      "city": "Zürich",
+      "city": "Luzern",
       "topics": [
         {
-          "urlkey": "dinner",
-          "name": "Dinner",
-          "id": 40569
+          "urlkey": "bike",
+          "name": "Bicycling",
+          "id": 579
+        },
+        {
+          "urlkey": "graphicdesign",
+          "name": "Graphic Design",
+          "id": 781
+        },
+        {
+          "urlkey": "movies",
+          "name": "Watching Movies",
+          "id": 1201
+        },
+        {
+          "urlkey": "film",
+          "name": "Film",
+          "id": 15029
+        },
+        {
+          "urlkey": "outdoors",
+          "name": "Outdoors",
+          "id": 15046
+        },
+        {
+          "urlkey": "online-marketing",
+          "name": "Online Marketing",
+          "id": 15585
+        },
+        {
+          "urlkey": "movie-nights",
+          "name": "Movie Nights",
+          "id": 15940
         },
         {
           "urlkey": "international-travel",
@@ -2516,19 +3013,19 @@
           "id": 16179
         },
         {
-          "urlkey": "cloud-computing",
-          "name": "Cloud Computing",
-          "id": 15167
+          "urlkey": "20s-30s-social",
+          "name": "20's & 30's Social",
+          "id": 17201
         },
         {
-          "urlkey": "newtech",
-          "name": "New Technology",
-          "id": 9696
+          "urlkey": "business-strategy",
+          "name": "Business Strategy",
+          "id": 17635
         },
         {
-          "urlkey": "internet-ecommerce",
-          "name": "E-Commerce",
-          "id": 27954
+          "urlkey": "cycling",
+          "name": "Cycling",
+          "id": 18617
         },
         {
           "urlkey": "user-experience",
@@ -2536,50 +3033,146 @@
           "id": 19243
         },
         {
-          "urlkey": "softwaredev",
-          "name": "Software Development",
-          "id": 3833
+          "urlkey": "communication-skills",
+          "name": "Communication Skills",
+          "id": 20923
         },
         {
-          "urlkey": "opensource",
-          "name": "Open Source",
-          "id": 563
+          "urlkey": "seo-search-engine-optimization",
+          "name": "SEO (Search Engine Optimization)",
+          "id": 23199
+        },
+        {
+          "urlkey": "hanging-out",
+          "name": "Hanging Out",
+          "id": 28172
+        },
+        {
+          "urlkey": "local-activities",
+          "name": "Local Activities",
+          "id": 64867
+        },
+        {
+          "urlkey": "ios-development",
+          "name": "iOS Development",
+          "id": 127567
+        },
+        {
+          "urlkey": "webdesign",
+          "name": "Web Design",
+          "id": 659
+        },
+        {
+          "urlkey": "ixd",
+          "name": "Interaction Design",
+          "id": 10110
+        },
+        {
+          "urlkey": "social-media",
+          "name": "Social Media",
+          "id": 15401
         }
       ],
-      "joined": 1486540836000,
-      "link": "http://www.meetup.com/members/215631068",
+      "joined": 1479246669000,
+      "link": "http://www.meetup.com/members/177252622",
       "photo": {
-        "highres_link": "https://secure.meetupstatic.com/photos/member/d/0/5/5/highres_261353333.jpeg",
-        "photo_id": 261353333,
+        "highres_link": "https://secure.meetupstatic.com/photos/member/5/f/8/e/highres_239544462.jpeg",
+        "photo_id": 239544462,
         "base_url": "https://secure.meetupstatic.com",
         "type": "member",
-        "photo_link": "https://secure.meetupstatic.com/photos/member/d/0/5/5/member_261353333.jpeg",
-        "thumb_link": "https://secure.meetupstatic.com/photos/member/d/0/5/5/thumb_261353333.jpeg"
+        "photo_link": "https://secure.meetupstatic.com/photos/member/5/f/8/e/member_239544462.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/5/f/8/e/thumb_239544462.jpeg"
+      },
+      "lon": 8.3,
+      "other_services": {
+
+      },
+      "name": "Gunnar",
+      "visited": 1523253528000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 177252622,
+      "lat": 47.06,
+      "status": "active"
+    },
+    {
+      "country": "es",
+      "city": "Barcelona",
+      "topics": [
+
+      ],
+      "joined": 1513526065000,
+      "link": "http://www.meetup.com/members/244090059",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/2/8/3/f/highres_273250303.jpeg",
+        "photo_id": 273250303,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/2/8/3/f/member_273250303.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/2/8/3/f/thumb_273250303.jpeg"
+      },
+      "lon": 2.17,
+      "other_services": {
+
+      },
+      "name": "Mark",
+      "visited": 1525105416000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 244090059,
+      "lat": 41.4,
+      "status": "active"
+    },
+    {
+      "country": "ch",
+      "city": "Zürich",
+      "topics": [
+
+      ],
+      "joined": 1482227609000,
+      "link": "http://www.meetup.com/members/211043006",
+      "photo": {
+        "highres_link": "https://secure.meetupstatic.com/photos/member/7/0/4/e/highres_264148750.jpeg",
+        "photo_id": 264148750,
+        "base_url": "https://secure.meetupstatic.com",
+        "type": "member",
+        "photo_link": "https://secure.meetupstatic.com/photos/member/7/0/4/e/member_264148750.jpeg",
+        "thumb_link": "https://secure.meetupstatic.com/photos/member/7/0/4/e/thumb_264148750.jpeg"
       },
       "lon": 8.54,
-      "other_services": {},
-      "name": "Saulius Kaukėnas",
-      "visited": 1503413007000,
-      "self": {
-        "common": {}
+      "other_services": {
+
       },
-      "id": 215631068,
+      "name": "Andrea E",
+      "visited": 1517781016000,
+      "self": {
+        "common": {
+
+        }
+      },
+      "id": 211043006,
       "lat": 47.38,
       "status": "active"
     }
   ],
   "meta": {
-    "next": "https://api.meetup.com/2/members?offset=1&format=json&group_id=21129934&page=20&key=292b784247418747b771f4d6a4f137a&order=visited&desc=true",
+    "next": "https://api.meetup.com/2/members?offset=1&format=json&group_id=21129934&page=30&key=123e651e3f70711b4b15151d6d671f75&order=visited&desc=true",
     "method": "Members",
-    "total_count": 169,
+    "total_count": 174,
     "link": "https://api.meetup.com/2/members",
-    "count": 20,
+    "count": 30,
     "description": "API method for accessing members of Meetup Groups",
     "lon": "",
     "title": "Meetup Members v2",
-    "url": "https://api.meetup.com/2/members?offset=0&format=json&group_id=21129934&page=20&key=292b784247418747b771f4d6a4f137a&order=visited&desc=true",
+    "url": "https://api.meetup.com/2/members?offset=0&format=json&group_id=21129934&page=30&key=123e651e3f70711b4b15151d6d671f75&order=visited&desc=true",
     "id": "",
-    "updated": 1538466958000,
+    "updated": 1539235970000,
     "lat": ""
   }
 }

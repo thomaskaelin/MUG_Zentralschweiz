@@ -9,27 +9,55 @@ namespace MUGAppCenter.Test.UI
     [TestFixture(Platform.iOS)]
     public class Tests
     {
-        IApp app;
-        Platform platform;
+        private readonly Platform _platform;
+        private IApp _app;
+
 
         public Tests(Platform platform)
         {
-            this.platform = platform;
+            _platform = platform;
         }
 
         [SetUp]
         public void BeforeEachTest()
         {
-            app = AppInitializer.StartApp(platform);
+            _app = AppInitializer.StartApp(_platform);
         }
 
         [Test]
-        public void WelcomeTextIsDisplayed()
+        public void FirstButtonDisplaysPopupMessage()
         {
-            AppResult[] results = app.WaitForElement(c => c.Marked("Welcome to Xamarin.Forms!"));
-            app.Screenshot("Welcome screen.");
+            WaitForElement("VS App Center Demo");
+            WaitForElement("Popup öffnen");
+            TakeScreenshot("App gestartet");
 
+            TapElement("Popup öffnen");
+            WaitForElement("Hallo MUG-Members!");
+            TakeScreenshot("Popup geöffnet");
+
+            TapElement("Ok");
+            WaitForElement("VS App Center Demo");
+            TakeScreenshot("Popup geschlossen");
+        }
+
+        #region Private Methods
+
+        private void WaitForElement(string marked)
+        {
+            var results = _app.WaitForElement(marked);
             Assert.IsTrue(results.Any());
         }
+
+        private void TapElement(string marked)
+        {
+            _app.Tap(marked);
+        }
+
+        private void TakeScreenshot(string name)
+        {
+            _app.Screenshot(name);
+        }
+
+        #endregion
     }
 }

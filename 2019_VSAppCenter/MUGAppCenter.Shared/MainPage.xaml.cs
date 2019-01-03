@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace MUGAppCenter.Shared
@@ -12,6 +8,26 @@ namespace MUGAppCenter.Shared
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private async void DoOnShowPopupPressed(object sender, EventArgs eventArgs)
+        {
+            await DisplayAlert(string.Empty, "Hallo MUG-Members!", "Ok");
+        }
+
+        private void DoOnTrackEventPressed(object sender, EventArgs eventArgs)
+        {
+            // TODO Event Tracking einbauen
+        }
+
+        private void DoOnTrackExceptionPressed(object sender, EventArgs eventArgs)
+        {
+            // TODO Exception Tracking einbauen
+        }
+
+        private void DoOnSimulateCrashPressed(object sender, EventArgs eventArgs)
+        {
+            // TODO App Crash einbauen
         }
     }
 }

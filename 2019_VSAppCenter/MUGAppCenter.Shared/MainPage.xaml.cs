@@ -10,6 +10,13 @@ namespace MUGAppCenter.Shared
             InitializeComponent();
         }
 
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // TODO Diagnostics: Crash-Recovery einbauen
+        }
+
         private async void DoOnShowPopupPressed(object sender, EventArgs eventArgs)
         {
             await DisplayAlert(string.Empty, "Hallo MUG-Members!", "Ok");
@@ -17,17 +24,17 @@ namespace MUGAppCenter.Shared
 
         private void DoOnTrackEventPressed(object sender, EventArgs eventArgs)
         {
-            // TODO Event Tracking einbauen
+            // TODO Analytics: Event Tracking einbauen
         }
 
         private void DoOnTrackExceptionPressed(object sender, EventArgs eventArgs)
         {
-            // TODO Exception Tracking einbauen
+            // TODO Diagnostics: Exception Tracking einbauen
         }
 
         private void DoOnSimulateCrashPressed(object sender, EventArgs eventArgs)
         {
-            // TODO App Crash einbauen
+            // TODO Diagnostics: App Crash einbauen
         }
     }
 }

@@ -15,15 +15,8 @@ namespace MUGAppCenter.Shared
 
         protected override void OnStart()
         {
-            // TODO App Center SDKs aktivieren
-        }
-
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
+            // TODO Push Notifications: Event für eingehende Meldungen abonnieren
+            // TODO SDK: App Center initialisieren
         }
     }
 }

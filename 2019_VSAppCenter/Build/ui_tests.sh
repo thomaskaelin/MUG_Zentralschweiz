@@ -12,6 +12,7 @@ TEST_PROJ="../MUGAppCenter.Test.UI/MUGAppCenter.Test.UI.csproj"
 TEST_PROJ_CFG="Release"
 TEST_OUTPUT="../MUGAppCenter.Test.UI/bin/Release/"
 
+APPCENTER_TOKEN=...
 APPCENTER_APP="Mobile-User-Group-Zentralschweiz/Hello-App-Center"
 APPCENTER_DEVICES=61ed3b41
 APPCENTER_SERIES="master"
@@ -22,7 +23,7 @@ clear
 $MSBUILD $ANDROID_PROJ /t:Clean,Restore,SignAndroidPackage /p:Configuration="$ANDROID_PROJ_CFG"
 $MSBUILD $TEST_PROJ /t:Clean,Restore,Build /p:Configuration="$TEST_PROJ_CFG" /p:BuildProjectReferences=false
 
-$APPCENTER login
+$APPCENTER login --token $APPCENTER_TOKEN
 $APPCENTER test run uitest \
   --app $APPCENTER_APP \
   --devices $APPCENTER_DEVICES \

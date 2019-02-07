@@ -1,5 +1,6 @@
 ﻿using System;
 using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Xamarin.Forms;
 
 namespace MUGAppCenter.Shared
@@ -15,7 +16,8 @@ namespace MUGAppCenter.Shared
         {
             base.OnAppearing();
 
-            // TODO Diagnostics: Crash-Recovery einbauen
+            if (await Crashes.HasCrashedInLastSessionAsync())
+                await DisplayAlert(string.Empty, "Sorry für den Crash! :-(", "Ok");
         }
 
         private async void DoOnShowPopupPressed(object sender, EventArgs eventArgs)
@@ -30,12 +32,13 @@ namespace MUGAppCenter.Shared
 
         private void DoOnTrackExceptionPressed(object sender, EventArgs eventArgs)
         {
-            // TODO Diagnostics: Exception Tracking einbauen
+            var exception = new Exception("Der 'Exception'-Button wurde gedrückt.");
+            Crashes.TrackError(exception);
         }
 
         private void DoOnSimulateCrashPressed(object sender, EventArgs eventArgs)
         {
-            // TODO Diagnostics: App Crash einbauen
+            throw new Exception("Der 'Crash'-Button wurde gedrückt.");
         }
     }
 }

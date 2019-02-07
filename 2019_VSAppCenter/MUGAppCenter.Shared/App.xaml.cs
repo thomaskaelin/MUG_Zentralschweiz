@@ -1,4 +1,8 @@
-﻿using Xamarin.Forms;
+﻿using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using Microsoft.AppCenter.Push;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
@@ -16,7 +20,12 @@ namespace MUGAppCenter.Shared
         protected override void OnStart()
         {
             // TODO Push Notifications: Event für eingehende Meldungen abonnieren
-            // TODO SDK: App Center initialisieren
+            AppCenter.Start("android=2af5b46d-9096-4dc3-8ef6-675ba452f3d8;" +
+                              "uwp={Your UWP App secret here};" +
+                              "ios={Your iOS App secret here}",
+                              typeof(Analytics),
+                              typeof(Crashes),
+                              typeof(Push));
         }
     }
 }

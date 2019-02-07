@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.AppCenter.Analytics;
 using Xamarin.Forms;
 
 namespace MUGAppCenter.Shared
@@ -24,7 +25,7 @@ namespace MUGAppCenter.Shared
 
         private void DoOnTrackEventPressed(object sender, EventArgs eventArgs)
         {
-            // TODO Analytics: Event Tracking einbauen
+            Analytics.TrackEvent("Der 'Track'-Button wurde gedrückt.");
         }
 
         private void DoOnTrackExceptionPressed(object sender, EventArgs eventArgs)

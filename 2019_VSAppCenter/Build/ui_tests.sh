@@ -13,8 +13,8 @@ TEST_PROJ_CFG="Release"
 TEST_OUTPUT="../MUGAppCenter.Test.UI/bin/Release/"
 
 APPCENTER_TOKEN=...
-APPCENTER_APP="Mobile-User-Group-Zentralschweiz/Hello-App-Center"
-APPCENTER_DEVICES=61ed3b41
+APPCENTER_APP="Mobile-User-Group-Zentralschweiz/Hello-App-Center-1"
+APPCENTER_DEVICES="Mobile-User-Group-Zentralschweiz/testgerate"
 APPCENTER_SERIES="master"
 APPCENTER_LOCALE="de_DE"
 

@@ -3,6 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Xamarin.Forms.Platform.Android;
 using Xamarin.Forms;
+using Plugin.CurrentActivity;
 
 namespace ACS.Droid
 {
@@ -16,8 +17,14 @@ namespace ACS.Droid
 
             base.OnCreate(savedInstanceState);
 
+            CrossCurrentActivity.Current.Init(this, savedInstanceState);
             Forms.Init(this, savedInstanceState);
             LoadApplication(new App());
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
+        {
+            Plugin.Permissions.PermissionsImplementation.Current.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }

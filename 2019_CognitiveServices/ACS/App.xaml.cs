@@ -9,7 +9,6 @@ namespace ACS
         public App()
         {
             InitializeComponent();
-
             MainPage = new MainPage();
         }
 

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ACS"
+             x:Class="ACS.MainPage"
+             Title="ACS Demo"
+             Padding="15">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+
+        <ActivityIndicator Grid.Row="0"
+                           Grid.Column="0"
+                           Grid.ColumnSpan="3"
+                           IsRunning="{Binding IsBusy, Mode=OneWay}" 
+                           HorizontalOptions="Center" />
+
+        <Image Grid.Row="1"
+               Grid.Column="0"
+               Grid.ColumnSpan="3"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="CenterAndExpand"
+               Source="{Binding PhotoSource, Mode=OneWay}" />
+
+        <Label Grid.Row="2"
+               Grid.Column="0"
+               Grid.ColumnSpan="3"
+               HorizontalOptions="CenterAndExpand"
+               VerticalOptions="Center"
+               FontSize="Medium"
+               Text="{Binding Description, Mode=OneWay}" />
+
+        <Button Grid.Row="3"
+                Grid.Column="0"
+                Text="Capture"
+                Command="{Binding CaptureCommand}" />
+
+        <Button Grid.Row="3"
+                Grid.Column="1"
+                Text="Analyze"
+                Command="{Binding AnalyzeCommand}" />
+
+        <Button Grid.Row="3"
+                Grid.Column="2"
+                Text="Read"
+                Command="{Binding SpeechCommand}" />
+    </Grid>
+</ContentPage>

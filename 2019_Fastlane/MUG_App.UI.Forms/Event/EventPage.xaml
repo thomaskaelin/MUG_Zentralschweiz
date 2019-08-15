@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MUG_App.UI.Forms.Event.EventPage"
+             Title="Events">
+    <ListView ItemsSource="{Binding Events}"
+              AutomationId="eventList"
+              HasUnevenRows="True"
+            ItemTapped="Handle_ItemTapped"
+            ItemSelected="Handle_ItemSelected"
+            IsPullToRefreshEnabled="true"
+            CachingStrategy="RecycleElement"
+            IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+            RefreshCommand="{Binding RefreshDataCommand}">
+    
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell StyleId="eventListCell">
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="20">
+                    <Label Text="{Binding Title}" FontAttributes="Bold" FontSize="16" AutomationId="eventListItem"/>
+                    
+                    <Label Text="{Binding RSVPCount, StringFormat='Anmeldungen: {0}'}" FontSize="14"/>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+   
+  </ListView>
+</ContentPage>

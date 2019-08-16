@@ -28,12 +28,17 @@ Executes unit- and integration-tests.
 ```
 fastlane android build
 ```
-Create an APK from source code.
+Creates an APK from source code.
 ### android install
 ```
 fastlane android install
 ```
 Installs a previously built APK on the connect device.
+### android deploy
+```
+fastlane android deploy
+```
+Deploys a previously built APK to Visual Studio App Center.
 ### android build_and_install
 ```
 fastlane android build_and_install
@@ -47,7 +52,7 @@ Combines the lanes 'build' and 'install'.
 ```
 fastlane ios build
 ```
-Create an IPA from source code.
+Creates an IPA from source code.
 
 ----
 

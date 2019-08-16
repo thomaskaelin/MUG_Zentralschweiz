@@ -20,6 +20,10 @@ before_all do |lane, options|
   ANDROID_KEYSTORE_ALIAS = ENV["ANDROID_KEYSTORE_ALIAS"]
   ANDROID_KEYSTORE_PWD = ENV["ANDROID_KEYSTORE_PWD"]
   ANDROID_OUTPUT_PATH = "#{ANDROID_FOLDER}/bin/Release"
+
+  APPCENTER_TOKEN = ENV["APPCENTER_TOKEN"]
+  APPCENTER_OWNER = ENV["APPCENTER_OWNER"]
+  APPCENTER_APP = ENV["APPCENTER_APP"]
 end
 
 # SHARED ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -34,7 +38,7 @@ end
 
 platform :android do
 
-  desc "Create an APK from source code."
+  desc "Creates an APK from source code."
   lane :build do
     git_revert(ANDROID_FOLDER)
 
@@ -73,13 +77,24 @@ platform :android do
       UI.important("Could not uninstall app with id '#{ANDROID_APPID}'.")
     end
 
-    apkPath = "#{ANDROID_OUTPUT_PATH}/#{ANDROID_APPID}-Signed.apk"
+    apkPath = android_get_apk_path()
 
     begin
       adb(command: "install #{apkPath}")
     rescue => ex
       UI.error("Could not install app from path '#{apkPath}'.")
     end
+  end
+
+  desc "Deploys a previously built APK to Visual Studio App Center."
+  lane :deploy do
+    appcenter_upload(
+      api_token: APPCENTER_TOKEN,
+      owner_type: "organization",
+      owner_name: APPCENTER_OWNER,
+      app_name: APPCENTER_APP,
+      apk: android_get_apk_path()
+    )
   end
 
   desc "Combines the lanes 'build' and 'install'."
@@ -93,7 +108,7 @@ end
 
 platform :ios do
 
-  desc "Create an IPA from source code."
+  desc "Creates an IPA from source code."
   lane :build do
     clean_and_restore()
 
@@ -174,4 +189,8 @@ def android_print_signing_parameters
       "KeyStore Password": ANDROID_KEYSTORE_PWD
     }
   )
+end
+
+def android_get_apk_path
+  return "#{ANDROID_OUTPUT_PATH}/#{ANDROID_APPID}-Signed.apk"
 end

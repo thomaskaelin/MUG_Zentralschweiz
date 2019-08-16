@@ -1,0 +1,177 @@
+# CONSTANTS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+before_all do |lane, options|
+  ENV_FILE = ENV["ENV_FILE"]
+
+  BUILD_NUMBER = 1
+  SEMANTIC_VERSION = "1.0.0"
+  FULL_VERSION = "#{SEMANTIC_VERSION}.#{BUILD_NUMBER}"
+  
+  SOLUTION_FILE = "MUG_App.sln"
+  UNITTEST_PROJECT = "MUG_App.Test.Unit/MUG_App.Test.Unit.csproj"
+  INTEGRATIONTEST_FOLDER = "MUG_App.Test.Integration/MUG_App.Test.Integration.csproj"
+  
+  ANDROID_FOLDER = "MUG_App.UI.Android"
+  ANDROID_PROJECT = "#{ANDROID_FOLDER}/MUG_App.UI.Android.csproj"
+  ANDROID_MANIFEST = "#{ANDROID_FOLDER}/Properties/AndroidManifest.xml"
+  ANDROID_ICONS = "#{ANDROID_FOLDER}/**/{icon,launcher_foreground}.{png,PNG}"
+  ANDROID_APPID = ENV["ANDROID_APPID"]
+  ANDROID_KEYSTORE_FILE = "#{ENV["PWD"]}/#{ENV["ANDROID_KEYSTORE_FILE"]}"
+  ANDROID_KEYSTORE_ALIAS = ENV["ANDROID_KEYSTORE_ALIAS"]
+  ANDROID_KEYSTORE_PWD = ENV["ANDROID_KEYSTORE_PWD"]
+  ANDROID_OUTPUT_PATH = "#{ANDROID_FOLDER}/bin/Release"
+end
+
+# SHARED ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+desc "Executes unit- and integration-tests."
+lane :tests do
+  run_tests(UNITTEST_PROJECT)
+  run_tests(INTEGRATIONTEST_FOLDER)
+end
+
+# ANDROID +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+platform :android do
+
+  desc "Create an APK from source code."
+  lane :build do
+    git_revert(ANDROID_FOLDER)
+
+    clean_and_restore()
+
+    android_print_signing_parameters()
+
+    update_icons(
+      environment: ENV_FILE,
+      version: FULL_VERSION,
+      searchPattern: ANDROID_ICONS
+    )
+
+    android_update_manifest(
+      manifestFile: ANDROID_MANIFEST,
+      appIdentifier: ANDROID_APPID,
+      versionCode: BUILD_NUMBER,
+      versionName: FULL_VERSION
+    )
+
+    xamarin_android(
+      project: ANDROID_PROJECT,
+      android_keystore: true,
+      android_signing_keystore: ANDROID_KEYSTORE_FILE,
+      android_signing_keyalias: ANDROID_KEYSTORE_ALIAS,
+      android_signing_storepass: ANDROID_KEYSTORE_PWD,
+      android_signing_keypass: ANDROID_KEYSTORE_PWD
+    )
+  end
+
+  desc "Installs a previously built APK on the connect device."
+  lane :install do
+    begin
+      adb(command: "uninstall #{ANDROID_APPID}")
+    rescue => ex
+      UI.important("Could not uninstall app with id '#{ANDROID_APPID}'.")
+    end
+
+    apkPath = "#{ANDROID_OUTPUT_PATH}/#{ANDROID_APPID}-Signed.apk"
+
+    begin
+      adb(command: "install #{apkPath}")
+    rescue => ex
+      UI.error("Could not install app from path '#{apkPath}'.")
+    end
+  end
+
+  desc "Combines the lanes 'build' and 'install'."
+  lane :build_and_install do
+    build()
+    install()
+  end
+end
+
+# iOS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+platform :ios do
+
+  desc "Create an IPA from source code."
+  lane :build do
+    clean_and_restore()
+
+    xamarin_ios(
+      solution: SOLUTION_FILE
+    )
+  end
+end
+
+# FUNCTIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+def git_revert(folder)
+  sh(command: "git checkout HEAD -- ../#{folder}")
+end
+
+def clean_and_restore
+    clean()
+    
+    nuget_restore(
+      project_path: SOLUTION_FILE
+    )
+end
+
+def run_tests(project)
+  sh(command: "dotnet test ../#{project} -v m -c Release")
+end
+
+def update_icons(environment:, version:, searchPattern:)
+  if (environment.casecmp "Production") == 0
+    return
+  end
+
+  UI.header("Step: update_android_icon")
+
+  add_badge(
+    glob: "/" + searchPattern,
+    no_badge: true,
+    shield: "#{environment}-#{version}-green",
+    shield_gravity: "Center",
+    shield_scale: "0.75",
+    grayscale: true
+  )
+end
+
+def android_update_manifest(manifestFile:,appIdentifier:,versionCode:,versionName:)
+  UI.header("Step: update_android_manifest")
+  
+  FastlaneCore::PrintTable.print_values(
+    config: {
+      "File": manifestFile,
+      "App Identifier": appIdentifier,
+      "Version Name": versionName,
+      "Version Code": versionCode
+    }
+  )
+
+  fullPathToManifest = File.absolute_path(ENV["PWD"] + "/" + manifestFile)
+
+  adoptedFileContent = File.open(fullPathToManifest) do |f|
+    manifest = f.read
+    manifest.gsub!(/package=\".+?\"/, "package=\"#{appIdentifier}\"")
+    manifest.gsub!(/android:versionCode=\"\d+\"/, "android:versionCode=\"#{versionCode}\"")
+    manifest.gsub!(/android:versionName=\".+?\"/, "android:versionName=\"#{versionName}\"")
+    manifest
+  end
+
+  IO.write(fullPathToManifest, adoptedFileContent)
+end
+
+def android_print_signing_parameters
+  UI.header("Step: print_android_signing_parameters")
+  
+  FastlaneCore::PrintTable.print_values(
+    title: "Android Signing Parameters",
+    config: {
+      "KeyStore File": ANDROID_KEYSTORE_FILE,
+      "KeyStore Alias": ANDROID_KEYSTORE_ALIAS,
+      "KeyStore Password": ANDROID_KEYSTORE_PWD
+    }
+  )
+end

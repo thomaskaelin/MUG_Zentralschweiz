@@ -286,3 +286,5 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+2019_Fastlane/fastlane_secrets
+.env.secret

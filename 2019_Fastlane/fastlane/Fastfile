@@ -1,6 +1,11 @@
+
+fastlane_require 'dotenv'
+
 # CONSTANTS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-before_all do |lane, options|
+before_all do
+  load_secrets()
+
   ENV_FILE = ENV["ENV_FILE"]
 
   BUILD_NUMBER = 1
@@ -104,7 +109,7 @@ platform :android do
       owner_type: "organization",
       owner_name: APPCENTER_OWNER,
       app_name: APPCENTER_APP,
-      apk: android_get_apk_path()
+      apk: ANDROID_APK_PATH
     )
   end
 
@@ -161,6 +166,16 @@ end
 
 def is_test_environment()
   return is_environment(environment: "Test")
+end
+
+def load_secrets()
+  fullPathToSecrets = File.absolute_path(ENV["PWD"] + "/fastlane/" + '.env.secret')
+
+  if (!File.exist?(fullPathToSecrets))
+    UI.user_error!("Environment-file with secrets does not exist: '#{fullPathToSecrets}'.")
+  end
+
+  Dotenv.overload(fullPathToSecrets)
 end
 
 def git_revert(folder)

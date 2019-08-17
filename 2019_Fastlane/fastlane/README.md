@@ -39,6 +39,11 @@ Installs a previously built APK on the connect device.
 fastlane android deploy
 ```
 Deploys a previously built APK to Visual Studio App Center.
+### android publish
+```
+fastlane android publish
+```
+Deploys a previously built APK to Google Play Store. Only available for 'Production'-environment.
 ### android build_and_install
 ```
 fastlane android build_and_install

@@ -20,10 +20,13 @@ before_all do |lane, options|
   ANDROID_KEYSTORE_ALIAS = ENV["ANDROID_KEYSTORE_ALIAS"]
   ANDROID_KEYSTORE_PWD = ENV["ANDROID_KEYSTORE_PWD"]
   ANDROID_OUTPUT_PATH = "#{ANDROID_FOLDER}/bin/Release"
+  ANDROID_APK_PATH = "#{ANDROID_OUTPUT_PATH}/#{ANDROID_APPID}-Signed.apk"
 
   APPCENTER_TOKEN = ENV["APPCENTER_TOKEN"]
   APPCENTER_OWNER = ENV["APPCENTER_OWNER"]
   APPCENTER_APP = ENV["APPCENTER_APP"]
+
+  PLAYSTORE_KEYFILE = "#{ENV["PWD"]}/#{ENV["PLAYSTORE_KEYFILE"]}"
 end
 
 # SHARED ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -44,13 +47,13 @@ platform :android do
 
     clean_and_restore()
 
-    android_print_signing_parameters()
-
-    update_icons(
-      environment: ENV_FILE,
-      version: FULL_VERSION,
-      searchPattern: ANDROID_ICONS
-    )
+    if !is_production_environment()
+      update_icons(
+        shieldTag: ENV_FILE,
+        version: FULL_VERSION,
+        searchPattern: ANDROID_ICONS
+      )
+    end
 
     android_update_manifest(
       manifestFile: ANDROID_MANIFEST,
@@ -58,6 +61,8 @@ platform :android do
       versionCode: BUILD_NUMBER,
       versionName: FULL_VERSION
     )
+
+    android_print_signing_parameters()
 
     xamarin_android(
       project: ANDROID_PROJECT,
@@ -77,12 +82,10 @@ platform :android do
       UI.important("Could not uninstall app with id '#{ANDROID_APPID}'.")
     end
 
-    apkPath = android_get_apk_path()
-
     begin
-      adb(command: "install #{apkPath}")
+      adb(command: "install #{ANDROID_APK_PATH}")
     rescue => ex
-      UI.error("Could not install app from path '#{apkPath}'.")
+      UI.error("Could not install app from path '#{ANDROID_APK_PATH}'.")
     end
   end
 
@@ -94,6 +97,20 @@ platform :android do
       owner_name: APPCENTER_OWNER,
       app_name: APPCENTER_APP,
       apk: android_get_apk_path()
+    )
+  end
+
+  desc "Deploys a previously built APK to Google Play Store. Only available for 'Production'-environment."
+  lane :publish do
+    if !is_production_environment()
+      UI.user_error!("Lane 'publish' is only available for 'Production'-environment.")
+    end
+
+    upload_to_play_store(
+      json_key: PLAYSTORE_KEYFILE,
+      package_name: ANDROID_APPID,
+      track: "internal",
+      apk: ANDROID_APK_PATH
     )
   end
 
@@ -120,6 +137,18 @@ end
 
 # FUNCTIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+def is_environment(environment:)
+  return (ENV_FILE.casecmp environment) == 0
+end
+
+def is_production_environment()
+  return is_environment(environment: "Production")
+end
+
+def is_test_environment()
+  return is_environment(environment: "Test")
+end
+
 def git_revert(folder)
   sh(command: "git checkout HEAD -- ../#{folder}")
 end
@@ -136,17 +165,13 @@ def run_tests(project)
   sh(command: "dotnet test ../#{project} -v m -c Release")
 end
 
-def update_icons(environment:, version:, searchPattern:)
-  if (environment.casecmp "Production") == 0
-    return
-  end
-
+def update_icons(shieldTag:, version:, searchPattern:)
   UI.header("Step: update_android_icon")
 
   add_badge(
     glob: "/" + searchPattern,
     no_badge: true,
-    shield: "#{environment}-#{version}-green",
+    shield: "#{shieldTag}-#{version}-green",
     shield_gravity: "Center",
     shield_scale: "0.75",
     grayscale: true
@@ -189,8 +214,4 @@ def android_print_signing_parameters
       "KeyStore Password": ANDROID_KEYSTORE_PWD
     }
   )
-end
-
-def android_get_apk_path
-  return "#{ANDROID_OUTPUT_PATH}/#{ANDROID_APPID}-Signed.apk"
 end

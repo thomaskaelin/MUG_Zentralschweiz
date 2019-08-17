@@ -22,6 +22,8 @@ before_all do |lane, options|
   ANDROID_OUTPUT_PATH = "#{ANDROID_FOLDER}/bin/Release"
   ANDROID_APK_PATH = "#{ANDROID_OUTPUT_PATH}/#{ANDROID_APPID}-Signed.apk"
 
+  IOS_FOLDER = "MUG_App.UI.iOS"
+
   APPCENTER_TOKEN = ENV["APPCENTER_TOKEN"]
   APPCENTER_OWNER = ENV["APPCENTER_OWNER"]
   APPCENTER_APP = ENV["APPCENTER_APP"]
@@ -40,13 +42,15 @@ end
 # ANDROID +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 platform :android do
+ 
+  desc "Reverts local changes to the source code of the Android-app and deletes temporary data."
+  lane :reset do
+    git_revert(ANDROID_FOLDER)
+    clean_and_restore()
+  end
 
   desc "Creates an APK from source code."
   lane :build do
-    git_revert(ANDROID_FOLDER)
-
-    clean_and_restore()
-
     if !is_production_environment()
       update_icons(
         shieldTag: ENV_FILE,
@@ -76,6 +80,8 @@ platform :android do
 
   desc "Installs a previously built APK on the connect device."
   lane :install do
+    android_abort_if_app_was_not_built()
+
     begin
       adb(command: "uninstall #{ANDROID_APPID}")
     rescue => ex
@@ -91,6 +97,8 @@ platform :android do
 
   desc "Deploys a previously built APK to Visual Studio App Center."
   lane :deploy do
+    android_abort_if_app_was_not_built()
+
     appcenter_upload(
       api_token: APPCENTER_TOKEN,
       owner_type: "organization",
@@ -102,6 +110,8 @@ platform :android do
 
   desc "Deploys a previously built APK to Google Play Store. Only available for 'Production'-environment."
   lane :publish do
+    android_abort_if_app_was_not_built()
+
     if !is_production_environment()
       UI.user_error!("Lane 'publish' is only available for 'Production'-environment.")
     end
@@ -125,10 +135,14 @@ end
 
 platform :ios do
 
+  desc "Reverts local changes to the source code of the iOS-app and deletes temporary data."
+  lane :reset do
+    git_revert(IOS_FOLDER)
+    clean_and_restore()
+  end
+
   desc "Creates an IPA from source code."
   lane :build do
-    clean_and_restore()
-
     xamarin_ios(
       solution: SOLUTION_FILE
     )
@@ -154,11 +168,8 @@ def git_revert(folder)
 end
 
 def clean_and_restore
-    clean()
-    
-    nuget_restore(
-      project_path: SOLUTION_FILE
-    )
+  clean()
+  nuget_restore(project_path: SOLUTION_FILE)
 end
 
 def run_tests(project)
@@ -214,4 +225,12 @@ def android_print_signing_parameters
       "KeyStore Password": ANDROID_KEYSTORE_PWD
     }
   )
+end
+
+def android_abort_if_app_was_not_built
+  fullPathToAPK = File.absolute_path(ENV["PWD"] + "/" + ANDROID_APK_PATH)
+
+  if (!File.exist?(fullPathToAPK))
+    UI.user_error!("APK-file does not exist: '#{fullPathToAPK}'.")
+  end
 end

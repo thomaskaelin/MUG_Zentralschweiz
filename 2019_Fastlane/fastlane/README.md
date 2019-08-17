@@ -24,6 +24,11 @@ Executes unit- and integration-tests.
 ----
 
 ## Android
+### android reset
+```
+fastlane android reset
+```
+Reverts local changes to the source code of the Android-app and deletes temporary data.
 ### android build
 ```
 fastlane android build
@@ -53,6 +58,11 @@ Combines the lanes 'build' and 'install'.
 ----
 
 ## iOS
+### ios reset
+```
+fastlane ios reset
+```
+Reverts local changes to the source code of the iOS-app and deletes temporary data.
 ### ios build
 ```
 fastlane ios build

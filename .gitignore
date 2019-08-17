@@ -288,3 +288,4 @@ __pycache__/
 *.xsd.cs
 2019_Fastlane/fastlane_secrets
 .env.secret
+report.xml

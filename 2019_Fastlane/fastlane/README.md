@@ -63,11 +63,26 @@ Combines the lanes 'build' and 'install'.
 fastlane ios reset
 ```
 Reverts local changes to the source code of the iOS-app and deletes temporary data.
-### ios build
+### ios build_adhoc
 ```
-fastlane ios build
+fastlane ios build_adhoc
 ```
-Creates an IPA from source code.
+Creates an IPA for AdHoc-deployment from source code.
+### ios build_store
+```
+fastlane ios build_store
+```
+Creates an IPA for Store-deployment from source code. Only available for 'Production'-environment.
+### ios install
+```
+fastlane ios install
+```
+Installs a previously built IPA on the connect device.
+### ios build_adhoc_and_install
+```
+fastlane ios build_adhoc_and_install
+```
+Combines the lanes 'build_adhoc' and 'install'.
 ### ios sync_certificates
 ```
 fastlane ios sync_certificates

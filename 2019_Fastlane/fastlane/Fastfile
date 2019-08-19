@@ -30,7 +30,11 @@ before_all do
   IOS_FOLDER = "MUG_App.UI.iOS"
   IOS_APPID = ENV["IOS_APPID"]
   IOS_APPNAME = ENV["IOS_APPNAME"]
-  IOS_DEVICES = "./fastlane/apple/ios-devices.txt"
+  IOS_DEVICES = "./fastlane/apple/ios-devices.txt"  
+  IOS_PLIST = "#{IOS_FOLDER}/Info.plist"
+  IOS_ICONS = "#{IOS_FOLDER}/Assets.xcassets/AppIcon.appiconset/{icon,iTunesArtwork}*.{png,PNG}"
+  IOS_OUTPUT_PATH = "#{IOS_FOLDER}/bin/iPhone/Release"
+  IOS_IPA_PATH = "#{IOS_OUTPUT_PATH}/MUG_App.iOS.ipa"
 
   APPCENTER_TOKEN = ENV["APPCENTER_TOKEN"]
   APPCENTER_OWNER = ENV["APPCENTER_OWNER"]
@@ -157,11 +161,30 @@ platform :ios do
     clean_and_restore()
   end
 
-  desc "Creates an IPA from source code."
-  lane :build do
-    xamarin_ios(
-      solution: SOLUTION_FILE
-    )
+  desc "Creates an IPA for AdHoc-deployment from source code."
+  lane :build_adhoc do
+    ios_build("AdHoc")
+  end
+
+  desc "Creates an IPA for Store-deployment from source code. Only available for 'Production'-environment."
+  lane :build_store do
+    if !is_production_environment()
+      UI.user_error!("Lane 'build_store' is only available for 'Production'-environment.")
+    end
+
+    ios_build("AppStore")
+  end
+
+  desc "Installs a previously built IPA on the connect device."
+  lane :install do
+    ios_abort_if_app_was_not_built()
+    sh(command: "ios-deploy --bundle #{ENV["PWD"]}/#{IOS_IPA_PATH}")
+  end
+
+  desc "Combines the lanes 'build_adhoc' and 'install'."
+  lane :build_adhoc_and_install do
+    build_adhoc()
+    install()
   end
 
   desc "Synchronizes all mandatory certificates with the Apple Developer Portal. If necessary, certificates will be updated."
@@ -301,5 +324,53 @@ def android_abort_if_app_was_not_built
 
   if (!File.exist?(fullPathToAPK))
     UI.user_error!("APK-file does not exist: '#{fullPathToAPK}'.")
+  end
+end
+
+def ios_build(type)
+  if !is_production_environment()
+    update_icons(
+      shieldTag: ENV_FILE,
+      version: FULL_VERSION,
+      searchPattern: IOS_ICONS
+    )
+  end
+
+  ios_update_plist(
+    plistFile: IOS_PLIST,
+    appIdentifier: IOS_APPID,
+    versionCode: BUILD_NUMBER,
+    fullVersion: FULL_VERSION
+  )
+
+  xamarin_ios(
+    solution: SOLUTION_FILE,
+    codesign_key: "937FBF807C176D166E65FC1A4080D10A2EC84DA4",
+    codesign_provision: "Automatic:#{type}"
+  )
+end
+
+def ios_update_plist(plistFile:,appIdentifier:,versionCode:,fullVersion:)
+  UI.header("Step: ios_update_plist")
+  
+  FastlaneCore::PrintTable.print_values(
+    config: {
+      "File": plistFile,
+      "App Identifier": appIdentifier,
+      "Version Name": fullVersion,
+      "Version Code": versionCode
+    }
+  )
+
+  set_info_plist_value(path: plistFile, key: "CFBundleIdentifier", value: appIdentifier)
+  set_info_plist_value(path: plistFile, key: "CFBundleVersion", value: versionCode)
+  set_info_plist_value(path: plistFile, key: "CFBundleShortVersionString", value: fullVersion)
+end
+
+def ios_abort_if_app_was_not_built
+  fullPathToIPA = File.absolute_path(ENV["PWD"] + "/" + IOS_IPA_PATH)
+
+  if (!File.exist?(fullPathToIPA))
+    UI.user_error!("IPA-file does not exist: '#{fullPathToIPA}'.")
   end
 end

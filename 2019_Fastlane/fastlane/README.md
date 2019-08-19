@@ -15,6 +15,11 @@ Install _fastlane_ using
 or alternatively using `brew cask install fastlane`
 
 # Available Actions
+### reset
+```
+fastlane reset
+```
+Reverts local changes to the source code of the Android- and iOS-app and deletes temporary data.
 ### tests
 ```
 fastlane tests

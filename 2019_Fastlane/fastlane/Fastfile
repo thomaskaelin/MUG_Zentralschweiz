@@ -53,6 +53,13 @@ end
 
 # SHARED ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
+desc "Reverts local changes to the source code of the Android- and iOS-app and deletes temporary data."
+lane :reset do
+  git_revert(ANDROID_FOLDER)
+  git_revert(IOS_FOLDER)
+  clean_and_restore()
+end
+
 desc "Executes unit- and integration-tests."
 lane :tests do
   run_tests(UNITTEST_PROJECT)

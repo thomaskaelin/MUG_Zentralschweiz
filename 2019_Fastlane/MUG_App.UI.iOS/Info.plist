@@ -25,7 +25,7 @@
 	<key>CFBundleDisplayName</key>
 	<string>MUG</string>
 	<key>CFBundleIdentifier</key>
-	<string>ch.mugz.apps.Meetup</string>
+	<string>ch.mugz.apps.meetup</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>CFBundleName</key>

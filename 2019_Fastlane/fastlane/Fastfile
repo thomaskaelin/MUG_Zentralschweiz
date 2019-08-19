@@ -28,12 +28,23 @@ before_all do
   ANDROID_APK_PATH = "#{ANDROID_OUTPUT_PATH}/#{ANDROID_APPID}-Signed.apk"
 
   IOS_FOLDER = "MUG_App.UI.iOS"
+  IOS_APPID = ENV["IOS_APPID"]
+  IOS_APPNAME = ENV["IOS_APPNAME"]
+  IOS_DEVICES = "./fastlane/apple/ios-devices.txt"
 
   APPCENTER_TOKEN = ENV["APPCENTER_TOKEN"]
   APPCENTER_OWNER = ENV["APPCENTER_OWNER"]
   APPCENTER_APP = ENV["APPCENTER_APP"]
 
   PLAYSTORE_KEYFILE = "#{ENV["PWD"]}/#{ENV["PLAYSTORE_KEYFILE"]}"
+
+  APPLE_STORE_USER = ENV["APPLE_STORE_USER"]
+  APPLE_STORE_TEAMID = ENV["APPLE_STORE_TEAMID"]
+  APPLE_STORE_TEAMNAME = ENV["APPLE_STORE_TEAMNAME"]
+  APPLE_STORE_CERTIFICATES_GIT_URL = ENV["APPLE_STORE_CERTIFICATES_GIT_URL"]
+  APPLE_STORE_CERTIFICATES_GIT_BRANCH = ENV["APPLE_STORE_CERTIFICATES_GIT_BRANCH"]
+  APPLE_STORE_CERTIFICATES_GIT_USER = ENV["APPLE_STORE_CERTIFICATES_GIT_USER"]
+  APPLE_STORE_CERTIFICATES_GIT_EMAIL = ENV["APPLE_STORE_CERTIFICATES_GIT_EMAIL"]
 end
 
 # SHARED ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -151,6 +162,49 @@ platform :ios do
     xamarin_ios(
       solution: SOLUTION_FILE
     )
+  end
+
+  desc "Synchronizes all mandatory certificates with the Apple Developer Portal. If necessary, certificates will be updated."
+  lane :sync_certificates do
+    create_app_online(
+      app_identifier: IOS_APPID,
+      app_name: IOS_APPNAME,
+      app_version: "1.0.0",
+      language: "German",
+      company_name: "Mobile User Group Zentralschweiz",
+      username: APPLE_STORE_USER,
+      team_id: APPLE_STORE_TEAMID,
+      team_name: APPLE_STORE_TEAMNAME,
+      skip_itc: true
+    )
+
+    register_devices(
+      username: APPLE_STORE_USER,
+      team_id: APPLE_STORE_TEAMID,
+      team_name: APPLE_STORE_TEAMNAME,
+      devices_file: IOS_DEVICES
+    )
+
+    types = ["adhoc", "development"]
+
+    if is_production_environment()
+      types << "appstore"
+    end
+
+    types.each { |type| 
+      sync_code_signing(
+        app_identifier: IOS_APPID,
+        type: type,
+        force_for_new_devices: true,
+        username: APPLE_STORE_USER,
+        team_id: APPLE_STORE_TEAMID,
+        team_name: APPLE_STORE_TEAMNAME,
+        git_url: APPLE_STORE_CERTIFICATES_GIT_URL,
+        git_branch: APPLE_STORE_CERTIFICATES_GIT_BRANCH,
+        git_full_name: APPLE_STORE_CERTIFICATES_GIT_USER,
+        git_user_email: APPLE_STORE_CERTIFICATES_GIT_EMAIL
+      )
+    }
   end
 end
 

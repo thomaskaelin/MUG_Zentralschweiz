@@ -68,6 +68,11 @@ Reverts local changes to the source code of the iOS-app and deletes temporary da
 fastlane ios build
 ```
 Creates an IPA from source code.
+### ios sync_certificates
+```
+fastlane ios sync_certificates
+```
+Synchronizes all mandatory certificates with the Apple Developer Portal. If necessary, certificates will be updated.
 
 ----
 

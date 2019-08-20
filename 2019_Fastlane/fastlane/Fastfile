@@ -21,6 +21,8 @@ before_all do
   ANDROID_MANIFEST = "#{ANDROID_FOLDER}/Properties/AndroidManifest.xml"
   ANDROID_ICONS = "#{ANDROID_FOLDER}/**/{icon,launcher_foreground}.{png,PNG}"
   ANDROID_APPID = ENV["ANDROID_APPID"]
+  ANDROID_KEYSTORE_GIT_URL = ENV["ANDROID_KEYSTORE_GIT_URL"]
+  ANDROID_KEYSTORE_GIT_BRANCH = ENV["ANDROID_KEYSTORE_GIT_BRANCH"]
   ANDROID_KEYSTORE_FILE = "#{ENV["PWD"]}/#{ENV["ANDROID_KEYSTORE_FILE"]}"
   ANDROID_KEYSTORE_ALIAS = ENV["ANDROID_KEYSTORE_ALIAS"]
   ANDROID_KEYSTORE_PWD = ENV["ANDROID_KEYSTORE_PWD"]
@@ -87,6 +89,13 @@ platform :android do
         searchPattern: ANDROID_ICONS
       )
     end
+
+    android_get_keystore(
+      gitUrl: ANDROID_KEYSTORE_GIT_URL,
+      gitBranch: ANDROID_KEYSTORE_GIT_BRANCH,
+      outputFile: ANDROID_KEYSTORE_FILE,
+      password: ENV["MATCH_PASSWORD"]
+    )
 
     android_update_manifest(
       manifestFile: ANDROID_MANIFEST,
@@ -349,6 +358,15 @@ def android_update_manifest(manifestFile:,appIdentifier:,versionCode:,versionNam
   end
 
   IO.write(fullPathToManifest, adoptedFileContent)
+end
+
+def android_get_keystore(gitUrl:,gitBranch:,outputFile:,password:)
+  UI.header("Step: android_get_keystore")
+
+  tempFolder = "/tmp/mugapp"
+  sh("git clone --single-branch --branch #{gitBranch} #{gitUrl} #{tempFolder}")
+  sh("openssl enc -aes-256-cbc -d -in #{tempFolder}/keystore/mug_app.keystore.enc -out #{outputFile} -k #{password}")
+  FileUtils.rm_rf(tempFolder)
 end
 
 def android_print_signing_parameters

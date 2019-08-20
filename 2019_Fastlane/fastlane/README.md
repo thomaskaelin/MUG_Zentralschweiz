@@ -88,6 +88,11 @@ Installs a previously built IPA on the connect device.
 fastlane ios build_adhoc_and_install
 ```
 Combines the lanes 'build_adhoc' and 'install'.
+### ios deploy
+```
+fastlane ios deploy
+```
+Deploys a previously built IPA to Visual Studio App Center.
 ### ios publish
 ```
 fastlane ios publish

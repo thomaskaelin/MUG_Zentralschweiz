@@ -196,6 +196,19 @@ platform :ios do
     install()
   end
 
+  desc "Deploys a previously built IPA to Visual Studio App Center."
+  lane :deploy do
+    ios_abort_if_app_was_not_built()
+
+    appcenter_upload(
+      api_token: APPCENTER_TOKEN,
+      owner_type: "organization",
+      owner_name: APPCENTER_OWNER,
+      app_name: "#{APPCENTER_APP}-1",
+      ipa: IOS_IPA_PATH
+    )
+  end
+
   desc "Deploys a previously built IPA to the Apple App Store. Only available for 'Production'-environment."
   lane :publish do
     ios_abort_if_app_was_not_built()

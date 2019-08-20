@@ -49,6 +49,8 @@ before_all do
   APPLE_STORE_CERTIFICATES_GIT_BRANCH = ENV["APPLE_STORE_CERTIFICATES_GIT_BRANCH"]
   APPLE_STORE_CERTIFICATES_GIT_USER = ENV["APPLE_STORE_CERTIFICATES_GIT_USER"]
   APPLE_STORE_CERTIFICATES_GIT_EMAIL = ENV["APPLE_STORE_CERTIFICATES_GIT_EMAIL"]
+  APPLE_STORE_METADATA = "./fastlane/metadata/ios"
+  APPLE_STORE_SCREENSHOTS = "./fastlane/metadata/ios_screenshots"
 end
 
 # SHARED ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -192,6 +194,29 @@ platform :ios do
   lane :build_adhoc_and_install do
     build_adhoc()
     install()
+  end
+
+  desc "Deploys a previously built IPA to the Apple App Store. Only available for 'Production'-environment."
+  lane :publish do
+    ios_abort_if_app_was_not_built()
+
+    if !is_production_environment()
+      UI.user_error!("Lane 'publish' is only available for 'Production'-environment.")
+    end
+
+    upload_to_app_store(
+      username: APPLE_STORE_USER,
+      team_id: APPLE_STORE_TEAMID,
+      team_name: APPLE_STORE_TEAMNAME,
+      app_identifier: IOS_APPID,
+      app_version: FULL_VERSION,
+      ipa: IOS_IPA_PATH,
+      metadata_path: APPLE_STORE_METADATA,
+      screenshots_path: APPLE_STORE_SCREENSHOTS,
+      submit_for_review: false,
+      automatic_release: false,
+      force: true
+    )
   end
 
   desc "Synchronizes all mandatory certificates with the Apple Developer Portal. If necessary, certificates will be updated."
@@ -347,7 +372,7 @@ def ios_build(type)
     plistFile: IOS_PLIST,
     appIdentifier: IOS_APPID,
     versionCode: BUILD_NUMBER,
-    fullVersion: FULL_VERSION
+    fullVersion: SEMANTIC_VERSION
   )
 
   xamarin_ios(

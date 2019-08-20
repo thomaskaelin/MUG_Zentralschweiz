@@ -289,3 +289,4 @@ __pycache__/
 2019_Fastlane/fastlane_secrets
 .env.secret
 report.xml
+Preview.html

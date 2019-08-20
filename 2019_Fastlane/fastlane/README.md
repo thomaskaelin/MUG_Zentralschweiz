@@ -88,6 +88,11 @@ Installs a previously built IPA on the connect device.
 fastlane ios build_adhoc_and_install
 ```
 Combines the lanes 'build_adhoc' and 'install'.
+### ios publish
+```
+fastlane ios publish
+```
+Deploys a previously built IPA to the Apple App Store. Only available for 'Production'-environment.
 ### ios sync_certificates
 ```
 fastlane ios sync_certificates

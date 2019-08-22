@@ -6,11 +6,11 @@ This repository contains the source code examples for the [Fastlane](https://fas
 
 For demonstrating the usefulness of Fastlane, a simple [Xamarin](https://dotnet.microsoft.com/apps/xamarin)-App for Android and iOS has been implemented. The app retrieves different information about the *[Mobile User Group Zentralschweiz](https://www.meetup.com/de-DE/Mobile-User-Group-Zentralschweiz/)* from Meetup.com and displays them inside the app.
 
-<img src="fastlane/metadata/ios_screenshots/de-DE/1_iphone6Plus_1.phone-5.8-1.png" width="250">
-
-<img src="fastlane/metadata/ios_screenshots/de-DE/2_iphone6Plus_2.phone-5.8-2.png" width="250">
-
-<img src="fastlane/metadata/ios_screenshots/de-DE/3_iphone6Plus_3.phone-5.8-3.png" width="250">
+<div style="white-space: nowrap;">
+  <img src="fastlane/metadata/ios_screenshots/de-DE/1_iphone6Plus_1.phone-5.8-1.png" width="200" border="1">
+  <img src="fastlane/metadata/ios_screenshots/de-DE/2_iphone6Plus_2.phone-5.8-2.png" width="200" border="1">
+  <img src="fastlane/metadata/ios_screenshots/de-DE/3_iphone6Plus_3.phone-5.8-3.png" width="200" border="1">
+</div>
 
 The following folders contain the source- and test-code for the app:
 

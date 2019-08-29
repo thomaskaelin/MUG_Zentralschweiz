@@ -30,18 +30,26 @@ namespace MUG_App.Shared.Services
         public async Task<IEnumerable<Event.Event>> LoadEventsAsync()
         {
             var result = new List<Event.Event>();
-            var loadedEvents = await GetDataAsync(EventsURL);
 
-            foreach (var loadedEvent in loadedEvents)
+            try
             {
-                var modelEvent = new Event.Event
-                {
-                    Title = loadedEvent["name"].ToString(),
-                    Description = HtmlFormatter.RemoveHtmlTags(loadedEvent["description"].ToString()),
-                    RSVPCount = int.Parse(loadedEvent["yes_rsvp_count"].ToString())
-                };
+                var loadedEvents = await GetDataAsync(EventsURL);
 
-                result.Add(modelEvent);
+                foreach (var loadedEvent in loadedEvents)
+                {
+                    var modelEvent = new Event.Event
+                    {
+                        Title = loadedEvent["name"].ToString(),
+                        Description = HtmlFormatter.RemoveHtmlTags(loadedEvent["description"].ToString()),
+                        RSVPCount = int.Parse(loadedEvent["yes_rsvp_count"].ToString())
+                    };
+
+                    result.Add(modelEvent);
+                }
+            }
+            catch (Exception ex)
+            {
+                LogException(ex);
             }
 
             return result;
@@ -53,15 +61,23 @@ namespace MUG_App.Shared.Services
 
         public async Task<Group.Group> LoadGroupAsync()
         {
-            var loadedGroup = await GetDataAsync(GroupURL);
+            var result = new Group.Group();
 
-            var result = new Group.Group
+            try
             {
-                Name = loadedGroup["name"].ToString(),
-                Description = HtmlFormatter.RemoveHtmlTags(loadedGroup["description"].ToString()),
-                City = loadedGroup["city"].ToString(),
-                ImageUrl = loadedGroup["group_photo"]["photo_link"].ToString()
-            };
+                var loadedGroup = await GetDataAsync(GroupURL);
+
+                result.Name = loadedGroup["name"].ToString();
+                result.Description = HtmlFormatter.RemoveHtmlTags(loadedGroup["description"].ToString());
+                result.City = loadedGroup["city"].ToString();
+                result.ImageUrl = loadedGroup["group_photo"]["photo_link"].ToString();
+
+                return result;
+            }
+            catch (Exception ex)
+            {
+                LogException(ex);
+            }
 
             return result;
         }
@@ -74,11 +90,18 @@ namespace MUG_App.Shared.Services
         {
             var result = new List<Organizer.Organizer>();
 
-            var modelOrganizer1 = await LoadOrganizerAsync(Organizer1URL);
-            var modelOrganizer2 = await LoadOrganizerAsync(Organizer2URL);
+            try
+            {
+                var modelOrganizer1 = await LoadOrganizerAsync(Organizer1URL);
+                var modelOrganizer2 = await LoadOrganizerAsync(Organizer2URL);
 
-            result.Add(modelOrganizer1);
-            result.Add(modelOrganizer2);
+                result.Add(modelOrganizer1);
+                result.Add(modelOrganizer2);
+            }
+            catch (Exception ex)
+            {
+                LogException(ex);
+            }
 
             return result;
         }
@@ -103,7 +126,7 @@ namespace MUG_App.Shared.Services
             }
             catch (Exception ex)
             {
-                Debug.WriteLine(@"ERROR {0}", ex.Message);
+                LogException(ex);
             }
 
             return result;
@@ -122,6 +145,11 @@ namespace MUG_App.Shared.Services
             };
 
             return modelOrganizer;
+        }
+
+        private static void LogException(Exception ex)
+        {
+            Debug.WriteLine(@"ERROR {0}", ex.Message);
         }
 
         #endregion

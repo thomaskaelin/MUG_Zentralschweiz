@@ -70,14 +70,14 @@ namespace MUG_App.Test.Integration
                 loaderService,
                 new Organizer
                 {
-                    Name = "Loana Albisser",
+                    Name = "Loana A.",
                     Description = string.Empty,
                     City = "Luzern",
                     ImageUrl = "https://secure.meetupstatic.com/photos/member/8/1/4/3/member_282993091.jpeg"
                 },
                 new Organizer
                 {
-                    Name = "Thomas Kälin",
+                    Name = "Thomas K.",
                     Description = "Siehe Xing:\nhttps://www.xing.com/profile/Thomas_Kaelin12",
                     City = "Luzern",
                     ImageUrl = "https://secure.meetupstatic.com/photos/member/9/2/f/d/member_261697629.jpeg"

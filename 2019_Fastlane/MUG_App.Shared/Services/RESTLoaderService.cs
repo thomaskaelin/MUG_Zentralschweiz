@@ -15,8 +15,8 @@ namespace MUG_App.Shared.Services
     {
         private const string GroupURL = "https://api.meetup.com/Mobile-User-Group-Zentralschweiz";
         private const string EventsURL = "https://api.meetup.com/Mobile-User-Group-Zentralschweiz/events";
-        private const string Organizer1URL = "https://api.meetup.com/2/member/216711932?key=123e651e3f70711b4b15151d6d671f75&group_urlname=mobile-user-group-zentralschweiz&sign=true";
-        private const string Organizer2URL = "https://api.meetup.com/2/member/184741056?key=123e651e3f70711b4b15151d6d671f75&group_urlname=mobile-user-group-zentralschweiz&sign=true";
+        private const string Organizer1URL = "https://api.meetup.com/mobile-user-group-zentralschweiz/members/216711932";
+        private const string Organizer2URL = "https://api.meetup.com/mobile-user-group-zentralschweiz/members/184741056";
 
         private readonly HttpClient _client;
 

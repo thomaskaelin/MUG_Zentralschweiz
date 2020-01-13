@@ -402,8 +402,8 @@ def ios_build(type)
   ios_update_plist(
     plistFile: IOS_PLIST,
     appIdentifier: IOS_APPID,
-    versionCode: FULL_VERSION,
-    fullVersion: SEMANTIC_VERSION
+    fullVersion: FULL_VERSION,
+    shortVersion: SEMANTIC_VERSION
   )
 
   xamarin_ios(
@@ -413,21 +413,21 @@ def ios_build(type)
   )
 end
 
-def ios_update_plist(plistFile:,appIdentifier:,versionCode:,fullVersion:)
+def ios_update_plist(plistFile:,appIdentifier:,fullVersion:,shortVersion:)
   UI.header("Step: ios_update_plist")
   
   FastlaneCore::PrintTable.print_values(
     config: {
       "File": plistFile,
       "App Identifier": appIdentifier,
-      "Version Name": fullVersion,
-      "Version Code": versionCode
+      "Short Version": shortVersion,
+      "Full Version": fullVersion
     }
   )
 
   set_info_plist_value(path: plistFile, key: "CFBundleIdentifier", value: appIdentifier)
-  set_info_plist_value(path: plistFile, key: "CFBundleVersion", value: versionCode)
-  set_info_plist_value(path: plistFile, key: "CFBundleShortVersionString", value: fullVersion)
+  set_info_plist_value(path: plistFile, key: "CFBundleVersion", value: fullVersion)
+  set_info_plist_value(path: plistFile, key: "CFBundleShortVersionString", value: shortVersion)
 end
 
 def ios_abort_if_app_was_not_built

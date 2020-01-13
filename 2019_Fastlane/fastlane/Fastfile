@@ -402,7 +402,7 @@ def ios_build(type)
   ios_update_plist(
     plistFile: IOS_PLIST,
     appIdentifier: IOS_APPID,
-    versionCode: BUILD_NUMBER,
+    versionCode: FULL_VERSION,
     fullVersion: SEMANTIC_VERSION
   )
 

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MUG_App.UI.Forms.Group.GroupPage"
+             Title="Group">
+  <ScrollView>
+        <StackLayout Padding="10">
+            <Label Text="{Binding Name}"
+                   AutomationId="groupNameLabel"
+                    HorizontalTextAlignment="Center"
+                    FontAttributes="Bold"
+                    FontSize="18"/>
+            <Image Source="{Binding ImageUrl}"/>
+            <Label Text="{Binding Description}" FontSize="16"/>
+    </StackLayout>
+  </ScrollView>
+</ContentPage>

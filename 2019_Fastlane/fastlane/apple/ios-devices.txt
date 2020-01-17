@@ -1,0 +1,2 @@
+Device ID	Device Name
+2a0cf991b40dffd25fd310d62959970b1d31a37b	Thomas Kaelin iPhone 6s

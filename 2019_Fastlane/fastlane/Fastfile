@@ -1,0 +1,439 @@
+
+fastlane_require 'dotenv'
+
+# CONSTANTS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+before_all do
+  load_secrets()
+
+  ENV_FILE = ENV["ENV_FILE"]
+
+  BUILD_NUMBER = 7
+  SEMANTIC_VERSION = "1.2.0"
+  FULL_VERSION = "#{SEMANTIC_VERSION}.#{BUILD_NUMBER}"
+  
+  SOLUTION_FILE = "MUG_App.sln"
+  UNITTEST_PROJECT = "MUG_App.Test.Unit/MUG_App.Test.Unit.csproj"
+  INTEGRATIONTEST_FOLDER = "MUG_App.Test.Integration/MUG_App.Test.Integration.csproj"
+  
+  ANDROID_FOLDER = "MUG_App.UI.Android"
+  ANDROID_PROJECT = "#{ANDROID_FOLDER}/MUG_App.UI.Android.csproj"
+  ANDROID_MANIFEST = "#{ANDROID_FOLDER}/Properties/AndroidManifest.xml"
+  ANDROID_ICONS = "#{ANDROID_FOLDER}/**/{icon,launcher_foreground}.{png,PNG}"
+  ANDROID_APPID = ENV["ANDROID_APPID"]
+  ANDROID_KEYSTORE_GIT_URL = ENV["ANDROID_KEYSTORE_GIT_URL"]
+  ANDROID_KEYSTORE_GIT_BRANCH = ENV["ANDROID_KEYSTORE_GIT_BRANCH"]
+  ANDROID_KEYSTORE_FILE = "#{ENV["PWD"]}/#{ENV["ANDROID_KEYSTORE_FILE"]}"
+  ANDROID_KEYSTORE_ALIAS = ENV["ANDROID_KEYSTORE_ALIAS"]
+  ANDROID_KEYSTORE_PWD = ENV["ANDROID_KEYSTORE_PWD"]
+  ANDROID_OUTPUT_PATH = "#{ANDROID_FOLDER}/bin/Release"
+  ANDROID_APK_PATH = "#{ANDROID_OUTPUT_PATH}/#{ANDROID_APPID}-Signed.apk"
+
+  IOS_FOLDER = "MUG_App.UI.iOS"
+  IOS_APPID = ENV["IOS_APPID"]
+  IOS_APPNAME = ENV["IOS_APPNAME"]
+  IOS_DEVICES = "./fastlane/apple/ios-devices.txt"  
+  IOS_PLIST = "#{IOS_FOLDER}/Info.plist"
+  IOS_ICONS = "#{IOS_FOLDER}/Assets.xcassets/AppIcon.appiconset/{icon,iTunesArtwork}*.{png,PNG}"
+  IOS_OUTPUT_PATH = "#{IOS_FOLDER}/bin/iPhone/Release"
+  IOS_IPA_PATH = "#{IOS_OUTPUT_PATH}/MUG_App.iOS.ipa"
+
+  APPCENTER_TOKEN = ENV["APPCENTER_TOKEN"]
+  APPCENTER_OWNER = ENV["APPCENTER_OWNER"]
+  APPCENTER_APP = ENV["APPCENTER_APP"]
+
+  PLAYSTORE_KEYFILE = "#{ENV["PWD"]}/#{ENV["PLAYSTORE_KEYFILE"]}"
+
+  APPLE_STORE_USER = ENV["APPLE_STORE_USER"]
+  APPLE_STORE_TEAMID = ENV["APPLE_STORE_TEAMID"]
+  APPLE_STORE_TEAMNAME = ENV["APPLE_STORE_TEAMNAME"]
+  APPLE_STORE_CERTIFICATES_GIT_URL = ENV["APPLE_STORE_CERTIFICATES_GIT_URL"]
+  APPLE_STORE_CERTIFICATES_GIT_BRANCH = ENV["APPLE_STORE_CERTIFICATES_GIT_BRANCH"]
+  APPLE_STORE_CERTIFICATES_GIT_USER = ENV["APPLE_STORE_CERTIFICATES_GIT_USER"]
+  APPLE_STORE_CERTIFICATES_GIT_EMAIL = ENV["APPLE_STORE_CERTIFICATES_GIT_EMAIL"]
+  APPLE_STORE_METADATA = "./fastlane/metadata/ios"
+  APPLE_STORE_SCREENSHOTS = "./fastlane/metadata/ios_screenshots"
+end
+
+# SHARED ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+desc "Reverts local changes to the source code of the Android- and iOS-app and deletes temporary data."
+lane :reset do
+  git_revert(ANDROID_FOLDER)
+  git_revert(IOS_FOLDER)
+  clean_and_restore()
+end
+
+desc "Executes unit- and integration-tests."
+lane :tests do
+  run_tests(UNITTEST_PROJECT)
+  run_tests(INTEGRATIONTEST_FOLDER)
+end
+
+# ANDROID +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+platform :android do
+ 
+  desc "Reverts local changes to the source code of the Android-app and deletes temporary data."
+  lane :reset do
+    git_revert(ANDROID_FOLDER)
+    clean_and_restore()
+  end
+
+  desc "Creates an APK from source code."
+  lane :build do
+    if !is_production_environment()
+      update_icons(
+        shieldTag: ENV_FILE,
+        version: FULL_VERSION,
+        searchPattern: ANDROID_ICONS
+      )
+    end
+
+    android_get_keystore(
+      gitUrl: ANDROID_KEYSTORE_GIT_URL,
+      gitBranch: ANDROID_KEYSTORE_GIT_BRANCH,
+      outputFile: ANDROID_KEYSTORE_FILE,
+      password: ENV["MATCH_PASSWORD"]
+    )
+
+    android_update_manifest(
+      manifestFile: ANDROID_MANIFEST,
+      appIdentifier: ANDROID_APPID,
+      versionCode: BUILD_NUMBER,
+      versionName: FULL_VERSION
+    )
+
+    android_print_signing_parameters()
+
+    xamarin_android(
+      project: ANDROID_PROJECT,
+      android_keystore: true,
+      android_signing_keystore: ANDROID_KEYSTORE_FILE,
+      android_signing_keyalias: ANDROID_KEYSTORE_ALIAS,
+      android_signing_storepass: ANDROID_KEYSTORE_PWD,
+      android_signing_keypass: ANDROID_KEYSTORE_PWD
+    )
+  end
+
+  desc "Installs a previously built APK on the connect device."
+  lane :install do
+    android_abort_if_app_was_not_built()
+
+    begin
+      adb(command: "uninstall #{ANDROID_APPID}")
+    rescue => ex
+      UI.important("Could not uninstall app with id '#{ANDROID_APPID}'.")
+    end
+
+    begin
+      adb(command: "install #{ANDROID_APK_PATH}")
+    rescue => ex
+      UI.error("Could not install app from path '#{ANDROID_APK_PATH}'.")
+    end
+  end
+
+  desc "Deploys a previously built APK to Visual Studio App Center."
+  lane :deploy do
+    android_abort_if_app_was_not_built()
+
+    appcenter_upload(
+      api_token: APPCENTER_TOKEN,
+      owner_type: "organization",
+      owner_name: APPCENTER_OWNER,
+      app_name: APPCENTER_APP,
+      apk: ANDROID_APK_PATH
+    )
+  end
+
+  desc "Deploys a previously built APK to Google Play Store. Only available for 'Production'-environment."
+  lane :publish do
+    android_abort_if_app_was_not_built()
+
+    if !is_production_environment()
+      UI.user_error!("Lane 'publish' is only available for 'Production'-environment.")
+    end
+
+    upload_to_play_store(
+      json_key: PLAYSTORE_KEYFILE,
+      package_name: ANDROID_APPID,
+      track: "internal",
+      apk: ANDROID_APK_PATH
+    )
+  end
+
+  desc "Combines the lanes 'build' and 'install'."
+  lane :build_and_install do
+    build()
+    install()
+  end
+end
+
+# iOS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+platform :ios do
+
+  desc "Reverts local changes to the source code of the iOS-app and deletes temporary data."
+  lane :reset do
+    git_revert(IOS_FOLDER)
+    clean_and_restore()
+  end
+
+  desc "Creates an IPA for AdHoc-deployment from source code."
+  lane :build_adhoc do
+    ios_build("AdHoc")
+  end
+
+  desc "Creates an IPA for Store-deployment from source code. Only available for 'Production'-environment."
+  lane :build_store do
+    if !is_production_environment()
+      UI.user_error!("Lane 'build_store' is only available for 'Production'-environment.")
+    end
+
+    ios_build("AppStore")
+  end
+
+  desc "Installs a previously built IPA on the connect device."
+  lane :install do
+    ios_abort_if_app_was_not_built()
+    sh(command: "ios-deploy --bundle #{ENV["PWD"]}/#{IOS_IPA_PATH}")
+  end
+
+  desc "Combines the lanes 'build_adhoc' and 'install'."
+  lane :build_adhoc_and_install do
+    build_adhoc()
+    install()
+  end
+
+  desc "Deploys a previously built IPA to Visual Studio App Center."
+  lane :deploy do
+    ios_abort_if_app_was_not_built()
+
+    appcenter_upload(
+      api_token: APPCENTER_TOKEN,
+      owner_type: "organization",
+      owner_name: APPCENTER_OWNER,
+      app_name: "#{APPCENTER_APP}-1",
+      ipa: IOS_IPA_PATH
+    )
+  end
+
+  desc "Deploys a previously built IPA to the Apple App Store. Only available for 'Production'-environment."
+  lane :publish do
+    ios_abort_if_app_was_not_built()
+
+    if !is_production_environment()
+      UI.user_error!("Lane 'publish' is only available for 'Production'-environment.")
+    end
+
+    upload_to_app_store(
+      username: APPLE_STORE_USER,
+      team_id: APPLE_STORE_TEAMID,
+      team_name: APPLE_STORE_TEAMNAME,
+      app_identifier: IOS_APPID,
+      app_version: FULL_VERSION,
+      ipa: IOS_IPA_PATH,
+      metadata_path: APPLE_STORE_METADATA,
+      screenshots_path: APPLE_STORE_SCREENSHOTS,
+      submit_for_review: false,
+      automatic_release: false,
+      force: true
+    )
+  end
+
+  desc "Synchronizes all mandatory certificates with the Apple Developer Portal. If necessary, certificates will be updated."
+  lane :sync_certificates do
+    create_app_online(
+      app_identifier: IOS_APPID,
+      app_name: IOS_APPNAME,
+      app_version: "1.0.0",
+      language: "German",
+      company_name: "Mobile User Group Zentralschweiz",
+      username: APPLE_STORE_USER,
+      team_id: APPLE_STORE_TEAMID,
+      team_name: APPLE_STORE_TEAMNAME,
+      skip_itc: true
+    )
+
+    register_devices(
+      username: APPLE_STORE_USER,
+      team_id: APPLE_STORE_TEAMID,
+      team_name: APPLE_STORE_TEAMNAME,
+      devices_file: IOS_DEVICES
+    )
+
+    types = ["adhoc", "development"]
+
+    if is_production_environment()
+      types << "appstore"
+    end
+
+    types.each { |type| 
+      sync_code_signing(
+        app_identifier: IOS_APPID,
+        type: type,
+        force_for_new_devices: true,
+        username: APPLE_STORE_USER,
+        team_id: APPLE_STORE_TEAMID,
+        team_name: APPLE_STORE_TEAMNAME,
+        git_url: APPLE_STORE_CERTIFICATES_GIT_URL,
+        git_branch: APPLE_STORE_CERTIFICATES_GIT_BRANCH,
+        git_full_name: APPLE_STORE_CERTIFICATES_GIT_USER,
+        git_user_email: APPLE_STORE_CERTIFICATES_GIT_EMAIL
+      )
+    }
+  end
+end
+
+# FUNCTIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+def is_environment(environment:)
+  return (ENV_FILE.casecmp environment) == 0
+end
+
+def is_production_environment()
+  return is_environment(environment: "Production")
+end
+
+def is_test_environment()
+  return is_environment(environment: "Test")
+end
+
+def load_secrets()
+  fullPathToSecrets = File.absolute_path(ENV["PWD"] + "/fastlane/" + '.env.secret')
+
+  if (!File.exist?(fullPathToSecrets))
+    UI.user_error!("Environment-file with secrets does not exist: '#{fullPathToSecrets}'.")
+  end
+
+  Dotenv.overload(fullPathToSecrets)
+end
+
+def git_revert(folder)
+  sh(command: "git checkout HEAD -- ../#{folder}")
+end
+
+def clean_and_restore
+  clean()
+  nuget_restore(project_path: SOLUTION_FILE)
+end
+
+def run_tests(project)
+  sh(command: "dotnet test ../#{project} -v m -c Release")
+end
+
+def update_icons(shieldTag:, version:, searchPattern:)
+  UI.header("Step: update_android_icon")
+
+  add_badge(
+    glob: "/" + searchPattern,
+    no_badge: true,
+    shield: "#{shieldTag}-#{version}-green",
+    shield_gravity: "Center",
+    shield_scale: "0.75",
+    grayscale: true
+  )
+end
+
+def android_update_manifest(manifestFile:,appIdentifier:,versionCode:,versionName:)
+  UI.header("Step: update_android_manifest")
+  
+  FastlaneCore::PrintTable.print_values(
+    config: {
+      "File": manifestFile,
+      "App Identifier": appIdentifier,
+      "Version Name": versionName,
+      "Version Code": versionCode
+    }
+  )
+
+  fullPathToManifest = File.absolute_path(ENV["PWD"] + "/" + manifestFile)
+
+  adoptedFileContent = File.open(fullPathToManifest) do |f|
+    manifest = f.read
+    manifest.gsub!(/package=\".+?\"/, "package=\"#{appIdentifier}\"")
+    manifest.gsub!(/android:versionCode=\"\d+\"/, "android:versionCode=\"#{versionCode}\"")
+    manifest.gsub!(/android:versionName=\".+?\"/, "android:versionName=\"#{versionName}\"")
+    manifest
+  end
+
+  IO.write(fullPathToManifest, adoptedFileContent)
+end
+
+def android_get_keystore(gitUrl:,gitBranch:,outputFile:,password:)
+  UI.header("Step: android_get_keystore")
+
+  tempFolder = "/tmp/mugapp"
+  sh("git clone --single-branch --branch #{gitBranch} #{gitUrl} #{tempFolder}")
+  sh("openssl enc -aes-256-cbc -d -in #{tempFolder}/keystore/mug_app.keystore.enc -out #{outputFile} -k #{password}")
+  FileUtils.rm_rf(tempFolder)
+end
+
+def android_print_signing_parameters
+  UI.header("Step: print_android_signing_parameters")
+  
+  FastlaneCore::PrintTable.print_values(
+    title: "Android Signing Parameters",
+    config: {
+      "KeyStore File": ANDROID_KEYSTORE_FILE,
+      "KeyStore Alias": ANDROID_KEYSTORE_ALIAS,
+      "KeyStore Password": ANDROID_KEYSTORE_PWD
+    }
+  )
+end
+
+def android_abort_if_app_was_not_built
+  fullPathToAPK = File.absolute_path(ENV["PWD"] + "/" + ANDROID_APK_PATH)
+
+  if (!File.exist?(fullPathToAPK))
+    UI.user_error!("APK-file does not exist: '#{fullPathToAPK}'.")
+  end
+end
+
+def ios_build(type)
+  if !is_production_environment()
+    update_icons(
+      shieldTag: ENV_FILE,
+      version: FULL_VERSION,
+      searchPattern: IOS_ICONS
+    )
+  end
+
+  ios_update_plist(
+    plistFile: IOS_PLIST,
+    appIdentifier: IOS_APPID,
+    fullVersion: FULL_VERSION,
+    shortVersion: SEMANTIC_VERSION
+  )
+
+  xamarin_ios(
+    solution: SOLUTION_FILE,
+    codesign_key: "937FBF807C176D166E65FC1A4080D10A2EC84DA4",
+    codesign_provision: "Automatic:#{type}"
+  )
+end
+
+def ios_update_plist(plistFile:,appIdentifier:,fullVersion:,shortVersion:)
+  UI.header("Step: ios_update_plist")
+  
+  FastlaneCore::PrintTable.print_values(
+    config: {
+      "File": plistFile,
+      "App Identifier": appIdentifier,
+      "Short Version": shortVersion,
+      "Full Version": fullVersion
+    }
+  )
+
+  set_info_plist_value(path: plistFile, key: "CFBundleIdentifier", value: appIdentifier)
+  set_info_plist_value(path: plistFile, key: "CFBundleVersion", value: fullVersion)
+  set_info_plist_value(path: plistFile, key: "CFBundleShortVersionString", value: shortVersion)
+end
+
+def ios_abort_if_app_was_not_built
+  fullPathToIPA = File.absolute_path(ENV["PWD"] + "/" + IOS_IPA_PATH)
+
+  if (!File.exist?(fullPathToIPA))
+    UI.user_error!("IPA-file does not exist: '#{fullPathToIPA}'.")
+  end
+end

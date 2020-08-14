@@ -1,2 +1,3 @@
 Device ID	Device Name
-2a0cf991b40dffd25fd310d62959970b1d31a37b	Thomas Kaelin iPhone 6s
+00008020-000E749E1EE8003A	Thomas Kaelin iPhone XS Max
+b5e43b81f9b2fdee464cfa0eb653f41126bea39c	Thomas Kaelin iPhone SE

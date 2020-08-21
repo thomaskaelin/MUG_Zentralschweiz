@@ -408,7 +408,7 @@ def ios_build(type)
 
   xamarin_ios(
     solution: SOLUTION_FILE,
-    codesign_key: "937FBF807C176D166E65FC1A4080D10A2EC84DA4",
+    codesign_key: "'Apple Distribution: Thomas  Kälin (R3NMWWMHAL)'",
     codesign_provision: "Automatic:#{type}"
   )
 end

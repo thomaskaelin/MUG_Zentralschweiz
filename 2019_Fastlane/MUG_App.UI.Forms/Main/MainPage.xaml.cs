@@ -9,12 +9,12 @@ namespace MUG_App.UI.Forms.Main
 {
 
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MainPage : MasterDetailPage
+    public partial class MainPage : FlyoutPage
     {
         public MainPage()
         {
             InitializeComponent();
-            MasterPage.ListView.ItemSelected += ListView_ItemSelected;
+            FlyoutPage.ListView.ItemSelected += ListView_ItemSelected;
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)
@@ -23,10 +23,9 @@ namespace MUG_App.UI.Forms.Main
             if (item == null)
                 return;
             NavigateTo(item);
-            MasterPage.ListView.SelectedItem = null;
+            FlyoutPage.ListView.SelectedItem = null;
             IsPresented = false;
         }
-
 
         private void NavigateTo(MainPageMenuItem menuItem)
         {

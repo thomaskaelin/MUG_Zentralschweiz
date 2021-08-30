@@ -8,8 +8,8 @@ before_all do
 
   ENV_FILE = ENV["ENV_FILE"]
 
-  BUILD_NUMBER = 7
-  SEMANTIC_VERSION = "1.2.0"
+  BUILD_NUMBER = 202108301
+  SEMANTIC_VERSION = "1.3.0"
   FULL_VERSION = "#{SEMANTIC_VERSION}.#{BUILD_NUMBER}"
   
   SOLUTION_FILE = "MUG_App.sln"
@@ -283,6 +283,35 @@ platform :ios do
       )
     }
   end
+
+  desc "Resets all certificates within the Apple Developer Portal. Use with care!"
+  lane :nuke_certificates do
+    confirmation = prompt(text: "Type CONFIRM as confirmation for the requested operation: ")
+  
+    if (confirmation != "CONFIRM")
+      UI.user_error!("Aborting executing: confirmation was wrong.")
+    end
+  
+    types = ["adhoc", "development"]
+  
+    if is_production_environment()
+      types << "appstore"
+    end
+  
+    types.each { |type| 
+      match_nuke(
+        app_identifier: IOS_APPID,
+        type: type,
+        username: APPLE_STORE_USER,
+        team_id: APPLE_STORE_TEAMID,
+        team_name: APPLE_STORE_TEAMNAME,
+        git_url: APPLE_STORE_CERTIFICATES_GIT_URL,
+        git_branch: APPLE_STORE_CERTIFICATES_GIT_BRANCH,
+        git_full_name: APPLE_STORE_CERTIFICATES_GIT_USER,
+        git_user_email: APPLE_STORE_CERTIFICATES_GIT_EMAIL
+      )
+    }
+  end
 end
 
 # FUNCTIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -300,7 +329,7 @@ def is_test_environment()
 end
 
 def load_secrets()
-  fullPathToSecrets = File.absolute_path(ENV["PWD"] + "/fastlane/" + '.env.secret')
+  fullPathToSecrets = File.absolute_path(ENV["PWD"] + "/fastlane/" + '.env.secrets')
 
   if (!File.exist?(fullPathToSecrets))
     UI.user_error!("Environment-file with secrets does not exist: '#{fullPathToSecrets}'.")

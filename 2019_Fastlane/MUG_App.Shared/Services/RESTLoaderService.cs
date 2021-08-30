@@ -22,7 +22,7 @@ namespace MUG_App.Shared.Services
 
         public RESTLoaderService()
         {
-            _client = new HttpClient { MaxResponseContentBufferSize = 256000 };
+            _client = new HttpClient { Timeout = TimeSpan.FromSeconds(10) };
         }
 
         #region IEventLoaderService

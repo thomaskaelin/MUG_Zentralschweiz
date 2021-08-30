@@ -103,9 +103,14 @@ Deploys a previously built IPA to the Apple App Store. Only available for 'Produ
 fastlane ios sync_certificates
 ```
 Synchronizes all mandatory certificates with the Apple Developer Portal. If necessary, certificates will be updated.
+### ios nuke_certificates
+```
+fastlane ios nuke_certificates
+```
+Resets all certificates within the Apple Developer Portal. Use with care!
 
 ----
 
-This README.md is auto-generated and will be re-generated every time [fastlane](https://fastlane.tools) is run.
+This README.md is auto-generated and will be re-generated every time [_fastlane_](https://fastlane.tools) is run.
 More information about fastlane can be found on [fastlane.tools](https://fastlane.tools).
 The documentation of fastlane can be found on [docs.fastlane.tools](https://docs.fastlane.tools).

@@ -1,17 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MUG_App.UI.Forms.Main.MainPage"
-             xmlns:main="clr-namespace:MUG_App.UI.Forms.Main;assembly=MUG_App.UI.Forms"
-             xmlns:group="clr-namespace:MUG_App.UI.Forms.Group;assembly=MUG_App.UI.Forms">
-  <MasterDetailPage.Master>
-    <main:MainPageMaster x:Name="MasterPage" />
-  </MasterDetailPage.Master>
-  <MasterDetailPage.Detail>
+<FlyoutPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+            x:Class="MUG_App.UI.Forms.Main.MainPage"
+            xmlns:main="clr-namespace:MUG_App.UI.Forms.Main;assembly=MUG_App.UI.Forms"
+            xmlns:group="clr-namespace:MUG_App.UI.Forms.Group;assembly=MUG_App.UI.Forms"
+            ios:Page.UseSafeArea="False">
+  <FlyoutPage.Flyout>
+    <main:MainPageMaster x:Name="FlyoutPage" />
+  </FlyoutPage.Flyout>
+  <FlyoutPage.Detail>
     <NavigationPage>
       <x:Arguments>
         <group:GroupPage />
       </x:Arguments>
     </NavigationPage>
-  </MasterDetailPage.Detail>
-</MasterDetailPage>
+  </FlyoutPage.Detail>
+</FlyoutPage>
